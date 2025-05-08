@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+
+    <title>Menu Complet | K-fee</title>
+    <meta name="description" content="Découvrez notre menu complet de cafés et boissons inspirés par la culture pop, les mangas et les animes chez K-fee.">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="K-fe.png" alt="K-fee Logo" width="120" height="50">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#accueil" class="nav-link">ACCUEIL</a></li>
+                    <li><a href="index.html#a-propos" class="nav-link">À PROPOS</a></li>
+                    <li><a href="index.html#produits" class="nav-link">PRODUITS</a></li>
+                    <li><a href="menu.html" class="nav-link active">MENU</a></li>
+                    <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+            <nav>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html#accueil" class="mobile-nav-link">ACCUEIL</a></li>
+                    <li><a href="index.html#a-propos" class="mobile-nav-link">À PROPOS</a></li>
+                    <li><a href="index.html#produits" class="mobile-nav-link">PRODUITS</a></li>
+                    <li><a href="menu.html" class="mobile-nav-link">MENU</a></li>
+                    <li><a href="index.html#contact" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu-hero">
+        <div class="menu-hero-overlay"></div>
+        <div class="container">
+            <h1 class="menu-title reveal-up">Notre Menu Complet</h1>
+            <p class="menu-subtitle reveal-up-delay">Découvrez toutes nos créations inspirées de la culture pop</p>
+        </div>
+    </section>
+
+    <section class="menu-tabs">
+        <div class="container">
+            <div class="tabs-container">
+                <button class="tab-btn active" data-category="signature">Cafés Signature</button>
+                <button class="tab-btn" data-category="specials">Spécialités Manga</button>
+                <button class="tab-btn" data-category="classics">Classiques</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-content">
+        <div class="container">
+            <!-- Cafés Signature -->
+            <div class="menu-category active" id="signature">
+                <div class="menu-header">
+                    <h2 class="category-title reveal-up">Cafés Signature</h2>
+                    <p class="category-description reveal-up-delay">Nos créations uniques inspirées des plus grands noms de la pop culture</p>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-image">
+                            <img src="img/b924a11332a2075fc8a64bca909c96a3.jpg" alt="La Trueno AE86">
+                            <div class="menu-item-badge">Bestseller</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">La Trueno AE86</h3>
+                                <span class="menu-item-price">4,50 €</span>
+                            </div>
+                            <p class="menu-item-description">Notre café signature au goût puissant et raffiné, inspiré de la légendaire Toyota AE86. Une expérience de dégustation qui vous transportera à toute vitesse vers de nouvelles sensations.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Café Signature</span>
+                                <span class="menu-tag">Intense</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-image">
+                            <img src="img/image.webp" alt="Le Zergling">
+                            <div class="menu-item-badge">Nouveauté</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Le Zergling</h3>
+                                <span class="menu-item-price">5,00 €</span>
+                            </div>
+                            <p class="menu-item-description">Une boisson énergisante aux notes fruitées et acidulées. Rapide à préparer et foudroyante en bouche, cette création unique vous donnera l'énergie dont vous avez besoin pour conquérir votre journée.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Énergisant</span>
+                                <span class="menu-tag">Fruité</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-image">
+                            <img src="img/image (1).jpg" alt="La Potion Teh Fortnite">
+                            <div class="menu-item-badge">Édition limitée</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">La Potion Teh Fortnite</h3>
+                                <span class="menu-item-price">5,50 €</span>
+                            </div>
+                            <p class="menu-item-description">Un mélange revigorant aux couleurs vives et au goût surprenant. Cette boisson ludique et désaltérante vous redonnera de la vie et vous préparera à affronter tous les défis.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Coloré</span>
+                                <span class="menu-tag">Rafraîchissant</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-image">
+                            <img src="img/993f6a0f28ba76a0741ea2f0d5652362.jpg" alt="La Rasengan">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">La Rasengan</h3>
+                                <span class="menu-item-price">5,20 €</span>
+                            </div>
+                            <p class="menu-item-description">Un café tourbillonnant d'énergie, avec une concentration intense de saveurs qui explose en bouche. Préparé avec notre technique spéciale, ce café vous donnera la force et la volonté de ne jamais abandonner.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Puissant</span>
+                                <span class="menu-tag">Aromatique</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-image">
+                            <img src="img/153fb13af7d4cdbb90b8d79607a1a6b8.jpg" alt="L'Ultra Instinct">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">L'Ultra Instinct</h3>
+                                <span class="menu-item-price">5,80 €</span>
+                            </div>
+                            <p class="menu-item-description">Notre café le plus puissant, aux notes révélatrices et au potentiel illimité. Une dégustation à plusieurs niveaux qui éveillera tous vos sens et libérera votre pleine puissance intérieure.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Ultra Fort</span>
+                                <span class="menu-tag">Complexe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spécialités Manga -->
+            <div class="menu-category" id="specials">
+                <div class="menu-header">
+                    <h2 class="category-title reveal-up">Spécialités Manga</h2>
+                    <p class="category-description reveal-up-delay">Des boissons aux influences japonaises pour les fans de mangas et d'anime</p>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-image">
+                            <img src="img/a0514ea3c638d0b6bf13667661350f6a.jpg" alt="Sakura Matcha Latte">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Sakura Matcha Latte</h3>
+                                <span class="menu-item-price">5,50 €</span>
+                            </div>
+                            <p class="menu-item-description">Un délicat latte au matcha japonais, parfumé aux fleurs de cerisier. Une boisson équilibrée et harmonieuse qui évoque le printemps à Kyoto.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Matcha</span>
+                                <span class="menu-tag">Floral</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-image">
+                            <img src="img/ae3e7456a98add3d7617333a627c3e18.jpg" alt="Titan Brew">
+                            <div class="menu-item-badge">Colossal</div>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Titan Brew</h3>
+                                <span class="menu-item-price">6,00 €</span>
+                            </div>
+                            <p class="menu-item-description">Une boisson colossale et puissante, servie fumante dans une grande tasse. Ce mélange de cafés d'origines diverses est aussi complexe que mystérieux, avec des notes épicées et terreuses.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Extra Large</span>
+                                <span class="menu-tag">Épicé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-image">
+                            <img src="img/ab67616d00001e023d889ffa9b83f3fddfdabc00.jpg" alt="Shonen Spirit">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Shonen Spirit</h3>
+                                <span class="menu-item-price">5,30 €</span>
+                            </div>
+                            <p class="menu-item-description">Un café dynamique aux multiples couches de saveurs qui se révèlent au fil de la dégustation. Notre recette évolue chaque saison, comme un bon manga qui progresse d'arc en arc.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Dynamique</span>
+                                <span class="menu-tag">Évolutif</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-image">
+                            <img src="img/image (2).webp" alt="Mecha Fuel">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Mecha Fuel</h3>
+                                <span class="menu-item-price">5,80 €</span>
+                            </div>
+                            <p class="menu-item-description">Le carburant parfait pour votre journée, cette boisson énergisante combine café, matcha et guarana pour une expérience mécanique de précision qui stimulera tous vos systèmes.</p>
+                            <div class="menu-item-tags">
+                                <span class="menu-tag">Haute Énergie</span>
+                                <span class="menu-tag">Technologique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Classiques -->
+            <div class="menu-category" id="classics">
+                <div class="menu-header">
+                    <h2 class="category-title reveal-up">Classiques</h2>
+                    <p class="category-description reveal-up-delay">Les grands classiques du café, préparés avec notre touche unique</p>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Espresso</h3>
+                                <span class="menu-item-price">2,20 €</span>
+                            </div>
+                            <p class="menu-item-description">Notre espresso signature, corsé et équilibré, avec des notes de chocolat noir et de noisettes torréfiées.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Cappuccino</h3>
+                                <span class="menu-item-price">3,80 €</span>
+                            </div>
+                            <p class="menu-item-description">Un espresso parfaitement équilibré avec du lait mousseux, créant une texture veloutée et une expérience de dégustation harmonieuse.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Latte</h3>
+                                <span class="menu-item-price">4,00 €</span>
+                            </div>
+                            <p class="menu-item-description">Notre espresso adouci par une généreuse quantité de lait crémeux, pour une boisson douce et réconfortante.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Café Américain</h3>
+                                <span class="menu-item-price">3,50 €</span>
+                            </div>
+                            <p class="menu-item-description">Un espresso allongé à l'eau chaude, offrant une boisson plus légère tout en préservant les arômes complexes de notre café.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Chocolat Chaud</h3>
+                                <span class="menu-item-price">4,20 €</span>
+                            </div>
+                            <p class="menu-item-description">Un riche mélange de chocolat belge fondu dans du lait chaud, garni de crème fouettée et de copeaux de chocolat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Chai Latte</h3>
+                                <span class="menu-item-price">4,50 €</span>
+                            </div>
+                            <p class="menu-item-description">Un mélange épicé de thé noir, cardamome, cannelle et autres épices, adouci avec du lait mousseux pour une expérience exotique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category" id="desserts">
+                <div class="menu-header">
+                    <h2 class="category-title reveal-up">Desserts</h2>
+                    <p class="category-description reveal-up-delay">Des douceurs pour accompagner votre café</p>
+                </div>
+
+                <div class="menu-grid">
+                    <!-- Item 1 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Dorayaki</h3>
+                                <span class="menu-item-price">3,80 €</span>
+                            </div>
+                            <p class="menu-item-description">Pâtisserie japonaise traditionnelle composée de deux pancakes moelleux fourrés à la pâte de haricot rouge.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Taiyaki</h3>
+                                <span class="menu-item-price">4,20 €</span>
+                            </div>
+                            <p class="menu-item-description">Gâteau japonais en forme de poisson, garni au choix de pâte de haricot rouge, de custard ou de chocolat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Cheesecake Japonais</h3>
+                                <span class="menu-item-price">5,50 €</span>
+                            </div>
+                            <p class="menu-item-description">Un cheesecake aérien et léger, à la texture soufflée, accompagné de coulis de fruits rouges.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-item reveal-right">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Mochi Glacé</h3>
+                                <span class="menu-item-price">4,50 €</span>
+                            </div>
+                            <p class="menu-item-description">Boule de glace enveloppée dans une pâte de riz gluant. Parfums disponibles : matcha, sakura, mangue, chocolat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="menu-item reveal-left">
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Cookie Pixel Art</h3>
+                                <span class="menu-item-price">3,90 €</span>
+                            </div>
+                            <p class="menu-item-description">Cookie artisanal décoré en pixel art, inspiré des personnages de jeux vidéo rétro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-cta">
+        <div class="container">
+            <div class="cta-content reveal-up">
+                <h2>Envie de découvrir nos créations ?</h2>
+                <p>Venez nous rendre visite ou commandez en ligne !</p>
+                <div class="cta-buttons">
+                    <a href="index.html#location" class="btn btn-primary">Nous trouver</a>
+                    <a href="#" class="btn btn-outline">Commander en ligne</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="K-fe.png" alt="K-fee Logo" width="120" height="50">
+                    </a>
+                    <p class="footer-tagline">
+                        Café de spécialité inspiré de la culture pop, pour des moments de dégustation uniques.
+                    </p>
+                </div>
+                
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#accueil">Accueil</a></li>
+                        <li><a href="index.html#a-propos">À propos</a></li>
+                        <li><a href="index.html#produits">Produits</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-legal">
+                    <h3 class="footer-heading">Légal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-hours">
+                    <h3 class="footer-heading">Horaires</h3>
+                    <ul class="footer-hours-list">
+                        <li>Lundi - Vendredi: 7h30 - 20h00</li>
+                        <li>Samedi - Dimanche: 8h00 - 21h00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="current-year"></span> K-fee. Tous droits réservés.
+                </p>
+                <p class="footer-tagline-small">
+                    Fait avec 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#e25555" stroke="#e25555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    et
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="coffee-icon">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

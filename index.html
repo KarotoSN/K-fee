@@ -5,116 +5,584 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
-    <link href=’https://fonts.googleapis.com/css?family=Dekko’ rel=’stylesheet’>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
 
-    <title>K-fee</title>
+    <title>K-fee | Café de spécialité inspiré par la culture pop</title>
+    <meta name="description" content="Découvrez K-fee, un café de spécialité où chaque boisson est inspirée par la culture pop, les mangas et les animes. Une expérience unique au cœur de Paris.">
 </head>
 <body>
-    <header>
-        <img src="K-fe.png" class="Logo">
-        <nav>
-            <ul>
-                <button><a href="#accueil">ACCEUIL</a></button>
-                <button><a href="#a-propos">A PROPOS</a></button>
-                <button><a href="#produits">PRODUITS</a></button>
-                <button><a href="#contact">CONTACT</a></button>
-            </ul>
-        </nav>
-        <button class="theme-toggle" aria-label="Toggle dark mode">
-            <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-            <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="K-fe.png" alt="K-fee Logo" width="120" height="50">
+            </a>
             
-        </button>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="#accueil" class="nav-link">ACCUEIL</a></li>
+                    <li><a href="#a-propos" class="nav-link">À PROPOS</a></li>
+                    <li><a href="#produits" class="nav-link">PRODUITS</a></li>
+                    <li><a href="menu.html" class="nav-link">MENU</a></li>
+                    <li><a href="#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
         
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+            <nav>
+                <ul class="mobile-nav-list">
+                    <li><a href="#accueil" class="mobile-nav-link">ACCUEIL</a></li>
+                    <li><a href="#a-propos" class="mobile-nav-link">À PROPOS</a></li>
+                    <li><a href="#produits" class="mobile-nav-link">PRODUITS</a></li>
+                    <li><a href="menu.html" class="mobile-nav-link">MENU</a></li>
+                    <li><a href="#contact" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="accueil">
-            <!-- Contenu de l'accueil -->
-        </section>
-
-        <section id="produits">
-            <!-- Liste des produits -->
-        </section>
-
-        <section id="contact">
-            <!-- Formulaire de contact -->
-        </section>
-    </main>
     
-        <div class="top">
-            <h1 class="Welcome">Welcome To K-fee</h1>
-            <img src="K-fe.png" class="logo-animation">
+    <section id="accueil" class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
         </div>
+        <div class="container hero-content">
+            <div class="hero-logo">
+                <img src="K-fe.png" alt="K-fee Logo" width="180" height="180">
+            </div>
+            <h1 class="hero-title" id="animated-title">Bienvenue chez K-fee</h1>
+            <p class="hero-description">
+                Découvrez notre sélection de cafés de spécialité et nos boissons signatures inspirées de la culture pop
+            </p>
+            <div class="hero-buttons">
+                <a href="#produits" class="btn btn-primary">Découvrir nos produits</a>
+                <a href="#contact" class="btn btn-outline">Nous trouver</a>
+            </div>
+            <a href="#a-propos" class="scroll-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-down">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="8 12 12 16 16 12"></polyline>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                </svg>
+                <span class="sr-only">Défiler vers le bas</span>
+            </a>
+        </div>
+    </section>
+    
+    <section id="a-propos" class="about-section">
         <div class="middle">
-            <div class="a-propos" id="a-propos">
-                <div class="text-content">
-                    <h1 style="opacity: 1; transform: translateY(0px);">Nous voici sur le marche l'air de la gourmandise s'est creer</h1>
+            <div class="a-propos">
+                <div class="text-content reveal-left">
+                    <h2 class="section-title">Nous voici sur le marché où l'air de la gourmandise s'est créé</h2>
                     <div class="paragraphs">
                         <p>Notre entreprise est spécialisée dans la vente de café et de machines à café. Nous proposons une large gamme de produits pour tous les goûts. Notre mission est de vous offrir la meilleure expérience possible en matière de café.</p>
-                        <p>Nous proposons une large gamme de produits pour tous les goûts.</p>
-                        <p>Notre mission est de vous offrir la meilleure expérience possible en matière de café.</p>
+                        <p>Chaque tasse que nous servons est une invitation à voyager dans un univers où les saveurs rencontrent l'imagination et la passion.</p>
+                        <p>Notre équipe de baristas passionnés crée chaque jour des boissons uniques qui vous transporteront dans vos univers préférés.</p>
                     </div>
+                    <div class="bean-decoration"></div>
                 </div>
-                <div class="image-content">
+                <div class="image-content reveal-right">
+                    <div class="about-badge">Depuis 2022</div>
                     <img class="rei" src="img/ab67616d00001e023d889ffa9b83f3fddfdabc00.jpg" alt="Image K-fee">
                     <p class="image-caption">'Waking up in the morning'</p>
                 </div>
             </div>
         </div>
-        <div class="featured-products" id="produits">
-            <h2>Nos Boissons Phares</h2>
-            
+    </section>
+
+    <section id="manga-concept" class="manga-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal-up">Notre Concept Manga</h2>
+                <p class="section-description reveal-up-delay">
+                    Plongez dans un univers où le café rencontre la culture manga
+                </p>
+            </div>
+    
+            <div class="manga-grid">
+                <div class="manga-image-container reveal-left">
+                    <div class="manga-frame">
+                        <img src="img/image (2).webp" alt="K-fee manga concept" class="manga-image">
+                        <div class="manga-speech-bubble">
+                            <p>Un café comme dans vos mangas préférés !</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="manga-features reveal-right">
+                    <div class="manga-feature">
+                        <div class="manga-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                <line x1="6" y1="1" x2="6" y2="4"></line>
+                                <line x1="10" y1="1" x2="10" y2="4"></line>
+                                <line x1="14" y1="1" x2="14" y2="4"></line>
+                            </svg>
+                        </div>
+                        <div class="manga-feature-content">
+                            <h3>Boissons Inspirées</h3>
+                            <p>Nos boissons sont inspirées des mangas et animes les plus populaires, avec des noms et des saveurs qui vous transporteront dans vos univers préférés.</p>
+                        </div>
+                    </div>
+    
+                    <div class="manga-feature">
+                        <div class="manga-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="manga-feature-content">
+                            <h3>Bibliothèque Manga</h3>
+                            <p>Profitez de notre vaste collection de mangas que vous pouvez lire tout en dégustant votre café. De One Piece à Naruto, nous avons tous les classiques.</p>
+                        </div>
+                    </div>
+    
+                    <div class="manga-feature">
+                        <div class="manga-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                <polyline points="17 2 12 7 7 2"></polyline>
+                            </svg>
+                        </div>
+                        <div class="manga-feature-content">
+                            <h3>Décoration Thématique</h3>
+                            <p>Notre café est décoré avec des illustrations originales et des références à la culture manga. Chaque coin raconte une histoire différente.</p>
+                        </div>
+                    </div>
+    
+                    <div class="manga-feature">
+                        <div class="manga-feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                            </svg>
+                        </div>
+                        <div class="manga-feature-content">
+                            <h3>Événements Cosplay</h3>
+                            <p>Participez à nos soirées cosplay mensuelles où les fans se réunissent pour célébrer leur passion commune pour les mangas et les animes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="manga-action reveal-up-delay-3">
+                <a href="#produits" class="btn btn-primary manga-btn">Découvrir nos créations</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="produits" class="featured-products">
+    <div class="container">
+        <h2 class="reveal-up">Nos Boissons Phares</h2>
+        <p class="section-description reveal-up-delay">Des créations uniques inspirées de la pop culture qui éveilleront vos papilles</p>
+        
+        <div class="product-container">
+            <!-- Produit 1: La Trueno AE86 -->
             <div class="product product-left">
                 <div class="product-image">
-                    <img src="img/b924a11332a2075fc8a64bca909c96a3.jpg" alt="Trueno AE86">
+                    <div class="product-image-inner">
+                        <img src="img/b924a11332a2075fc8a64bca909c96a3.jpg" alt="La Trueno AE86">
+                        <div class="product-badge">Bestseller</div>
+                        <div class="steam">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="product-info">
                     <h3>La Trueno AE86</h3>
+                    <span class="product-tagline">Dérapez dans un monde de saveurs intenses</span>
                     <p>Notre café signature au goût puissant et raffiné, inspiré de la légendaire Toyota AE86. Une expérience de dégustation qui vous transportera à toute vitesse vers de nouvelles sensations.</p>
-                    <button class="btn-product">Découvrir</button>
+                    
+                    <div class="temperature-indicator">
+                        <span class="temperature-label">Température idéale</span>
+                        <div class="temperature-bar">
+                            <div class="temperature-marker" style="left: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-stats">
+                        <div class="stat">
+                            <div class="stat-value">4/5</div>
+                            <div class="stat-label">Intensité</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">2/5</div>
+                            <div class="stat-label">Acidité</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">4/5</div>
+                            <div class="stat-label">Corps</div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-product-container">
+                        <button class="btn-product">Commander</button>
+                        <div class="cup-decoration"></div>
+                    </div>
                 </div>
             </div>
             
+            <!-- Produit 2: Le Zergling -->
             <div class="product product-right">
+                <div class="product-image">
+                    <div class="product-image-inner">
+                        <img src="img/image.webp" alt="Le Zergling">
+                        <div class="product-badge">Nouveauté</div>
+                        <div class="steam">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
                 <div class="product-info">
                     <h3>Le Zergling</h3>
+                    <span class="product-tagline">Une explosion d'énergie en tasse</span>
                     <p>Une boisson énergisante aux notes fruitées et acidulées. Rapide à préparer et foudroyante en bouche, cette création unique vous donnera l'énergie dont vous avez besoin pour conquérir votre journée.</p>
-                    <button class="btn-product">Découvrir</button>
-                </div>
-                <div class="product-image">
-                    <img src="img/image.webp" alt="Le Zergling">
+                    
+                    <div class="temperature-indicator">
+                        <span class="temperature-label">Température idéale</span>
+                        <div class="temperature-bar">
+                            <div class="temperature-marker" style="left: 55%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-stats">
+                        <div class="stat">
+                            <div class="stat-value">5/5</div>
+                            <div class="stat-label">Énergie</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">3/5</div>
+                            <div class="stat-label">Acidité</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">4/5</div>
+                            <div class="stat-label">Fruité</div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-product-container">
+                        <button class="btn-product">Commander</button>
+                        <div class="cup-decoration"></div>
+                    </div>
                 </div>
             </div>
             
+            <!-- Produit 3: La Potion Teh Fortnite -->
             <div class="product product-left">
                 <div class="product-image">
-                    <img src="img/image (1).jpg" alt="La Potion Teh Fortnite">
+                    <div class="product-image-inner">
+                        <img src="img/image (1).jpg" alt="La Potion Teh Fortnite">
+                        <div class="product-badge">Édition limitée</div>
+                        <div class="steam">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="product-info">
                     <h3>La Potion Teh Fortnite</h3>
+                    <span class="product-tagline">Restaurez vos points de vie</span>
                     <p>Un mélange revigorant aux couleurs vives et au goût surprenant. Cette boisson ludique et désaltérante vous redonnera de la vie et vous préparera à affronter tous les défis.</p>
-                    <button class="btn-product">Découvrir</button>
+                    
+                    <div class="temperature-indicator">
+                        <span class="temperature-label">Température idéale</span>
+                        <div class="temperature-bar">
+                            <div class="temperature-marker" style="left: 30%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-stats">
+                        <div class="stat">
+                            <div class="stat-value">4/5</div>
+                            <div class="stat-label">Fraîcheur</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">3/5</div>
+                            <div class="stat-label">Douceur</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">5/5</div>
+                            <div class="stat-label">Originalité</div>
+                        </div>
+                    </div>
+                    
+                    <div class="btn-product-container">
+                        <button class="btn-product">Commander</button>
+                        <div class="cup-decoration"></div>
+                    </div>
                 </div>
             </div>
         </div>
-            
+        
+        <div class="products-cta">
+            <a href="menu.html" class="btn btn-primary btn-glow">Voir notre menu complet</a>
+        </div>
+    </div>
+</section>
     
+    <section id="location" class="location-section">
+        <div class="location-decoration"></div>
+        <div class="location-container">
+            <h2 class="location-section-title reveal-up">Nous Trouvez</h2>
+            <p class="location-section-subtitle reveal-up-delay">
+                Venez déguster nos créations uniques dans notre café inspiré par la culture pop au cœur de Paris
+            </p>
 
-    <footer>
-        <p>&copy; 2024 K-fee. Tous droits réservés.</p>
+            <div class="location-grid">
+                <div class="location-card reveal-left">
+                    <div class="location-header">
+                        <h3 class="location-title">
+                            <span class="location-title-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </span>
+                            K-fee Café
+                        </h3>
+                        <p class="location-subtitle">Votre oasis de détente et de saveurs</p>
+                    </div>
+
+                    <div class="location-details">
+                        <div class="location-item">
+                            <span class="location-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </span>
+                            <div class="location-content">
+                                <h4 class="location-item-title">Adresse</h4>
+                                <p class="location-item-text">
+                                    42 Rue du Café<br>
+                                    75001 Paris, France
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <span class="location-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </span>
+                            <div class="location-content">
+                                <h4 class="location-item-title">Horaires d'ouverture</h4>
+                                <p class="location-item-text">
+                                    Lundi - Vendredi: 7h30 - 20h00<br>
+                                    Samedi - Dimanche: 8h00 - 21h00
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <span class="location-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </span>
+                            <div class="location-content">
+                                <h4 class="location-item-title">Contact</h4>
+                                <p class="location-item-text">
+                                    Téléphone: +33 1 23 45 67 89<br>
+                                    Email: bonjour@k-fee.fr
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <span class="location-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </span>
+                            <div class="location-content">
+                                <h4 class="location-item-title">À propos du lieu</h4>
+                                <p class="location-item-text">
+                                    WiFi gratuit, Espace de travail confortable<br>
+                                    Ambiance manga & culture pop
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-socials">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="location-map-container reveal-right">
+                    <div class="map-badge">Notre Café</div>
+                    <iframe 
+                        class="location-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1751.7066995070131!2d2.3398841674424653!3d48.865933955536576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f6b38236ffb%3A0x89a4217d7417556f!2sThe%20Coffee!5e0!3m2!1sfr!2sfr!4v1743176027536!5m2!1sfr!2sfr" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="K-fee location">
+                    </iframe>
+                    <div class="map-overlay"></div>
+                    <div class="map-actions">
+                        <a href="https://goo.gl/maps/XYZ123" target="_blank" class="map-button">
+                            <span class="map-button-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </span>
+                            Itinéraire
+                        </a>
+                        <a href="tel:+33123456789" class="map-button">
+                            <span class="map-button-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </span>
+                            Appeler
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-cta reveal-up-delay-3">
+                <p class="location-cta-text">Vous avez des questions ou besoin de réserver ?</p>
+                <a href="mailto:bonjour@k-fee.fr" class="btn btn-primary">Contactez-nous</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <img src="K-fe.png" alt="K-fee Logo" width="120" height="50">
+                    </a>
+                    <p class="footer-tagline">
+                        Café de spécialité inspiré de la culture pop, pour des moments de dégustation uniques.
+                    </p>
+                </div>
+                
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#a-propos">À propos</a></li>
+                        <li><a href="#produits">Produits</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-legal">
+                    <h3 class="footer-heading">Légal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-hours">
+                    <h3 class="footer-heading">Horaires</h3>
+                    <ul class="footer-hours-list">
+                        <li>Lundi - Vendredi: 7h30 - 20h00</li>
+                        <li>Samedi - Dimanche: 8h00 - 21h00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="current-year"></span> K-fee. Tous droits réservés.
+                </p>
+                <p class="footer-tagline-small">
+                    Fait avec 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#e25555" stroke="#e25555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    et
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="coffee-icon">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                </p>
+            </div>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
