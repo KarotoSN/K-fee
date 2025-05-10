@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Recettes | K-fee</title>
+    <meta name="description" content="Découvrez notre catalogue complet de recettes de café créatives et détaillées pour réaliser des boissons exceptionnelles à la maison.">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="K-fe.png" alt="K-fee Logo" width="120" height="50">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">ACCUEIL</a></li>
+                    <li><a href="recettes.html" class="nav-link active">RECETTES</a></li>
+                    <li><a href="index.html#a-propos" class="nav-link">À PROPOS</a></li>
+                    <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Theme Toggle -->
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+            <nav>
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html" class="mobile-nav-link">ACCUEIL</a></li>
+                    <li><a href="recettes.html" class="mobile-nav-link">RECETTES</a></li>
+                    <li><a href="index.html#a-propos" class="mobile-nav-link">À PROPOS</a></li>
+                    <li><a href="index.html#contact" class="mobile-nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="recipe-catalog">
+        <div class="search-bar-container">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" id="recipe-search" placeholder="Rechercher une recette...">
+                    <button id="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="recipe-categories">
+                <button class="recipe-cat-btn active" data-category="all">Toutes les recettes</button>
+                <button class="recipe-cat-btn" data-category="hot">Boissons chaudes</button>
+                <button class="recipe-cat-btn" data-category="cold">Boissons froides</button>
+                <button class="recipe-cat-btn" data-category="special">Créations spéciales</button>
+            </div>
+            
+            <div class="recipe-grid">
+                <!-- Recette 1 -->
+                <div class="recipe-item" data-category="hot special">
+                    <div class="recipe-item-image">
+                        <img src="img/b924a11332a2075fc8a64bca909c96a3.jpg" alt="La Trueno D'Akina">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">La Trueno D'Akina</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Intense</span>
+                            <span class="recipe-tag">Stratifié</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Un café stratifié noir et blanc inspiré de la légendaire AE86. Cette création audacieuse offre une expérience de dégustation qui évolue à chaque gorgée, passant de notes intenses à des saveurs plus douces.
+                        </p>
+                        <a href="menu.html#trueno" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 2 -->
+                <div class="recipe-item" data-category="cold">
+                    <div class="recipe-item-image">
+                        <img src="img/image.webp" alt="Le Zergling">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">Le Zergling</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Fruité</span>
+                            <span class="recipe-tag">Explosif</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Une boisson énergisante aux notes fruitées et acidulées. Rapide à préparer et foudroyante en bouche, cette création unique vous donnera l'énergie dont vous avez besoin pour conquérir votre journée.
+                        </p>
+                        <a href="menu.html#zergling" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 3 -->
+                <div class="recipe-item" data-category="cold special">
+                    <div class="recipe-item-image">
+                        <img src="img/image (1).jpg" alt="La Potion">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">La Potion</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Coloré</span>
+                            <span class="recipe-tag">Revigorant</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Un mélange revigorant aux couleurs vives et au goût surprenant. Cette boisson ludique et désaltérante vous redonnera de la vie et vous préparera à affronter tous les défis.
+                        </p>
+                        <a href="menu.html#potion" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 4 -->
+                <div class="recipe-item" data-category="hot">
+                    <div class="recipe-item-image">
+                        <img src="img/a0514ea3c638d0b6bf13667661350f6a.jpg" alt="Sakura Matcha">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">Sakura Matcha</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Floral</span>
+                            <span class="recipe-tag">Équilibré</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Un délicat latte au matcha japonais, parfumé aux fleurs de cerisier. Une boisson équilibrée et harmonieuse qui évoque le printemps à Kyoto et transporte vos sens au Japon.
+                        </p>
+                        <a href="menu.html#sakura" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 5 -->
+                <div class="recipe-item" data-category="hot special">
+                    <div class="recipe-item-image">
+                        <img src="img/153fb13af7d4cdbb90b8d79607a1a6b8.jpg" alt="L'Ultra Instinct">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">L'Ultra Instinct</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Ultra Fort</span>
+                            <span class="recipe-tag">Complexe</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Notre café le plus puissant, aux notes révélatrices et au potentiel illimité. Une dégustation à plusieurs niveaux qui éveillera tous vos sens et libérera votre pleine puissance intérieure.
+                        </p>
+                        <a href="menu.html#ultra" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 6 -->
+                <div class="recipe-item" data-category="hot">
+                    <div class="recipe-item-image">
+                        <img src="img/ae3e7456a98add3d7617333a627c3e18.jpg" alt="Titan Brew">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">Titan Brew</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Colossal</span>
+                            <span class="recipe-tag">Épicé</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Une boisson colossale et puissante, servie fumante dans une grande tasse. Ce mélange de cafés d'origines diverses est aussi complexe que mystérieux, avec des notes épicées et terreuses.
+                        </p>
+                        <a href="menu.html#titan" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 7 -->
+                <div class="recipe-item" data-category="cold">
+                    <div class="recipe-item-image">
+                        <img src="img/993f6a0f28ba76a0741ea2f0d5652362.jpg" alt="Le Rasengan">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">Le Rasengan</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Tourbillonnant</span>
+                            <span class="recipe-tag">Rafraîchissant</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Cette boisson tourbillonnante, inspirée par la célèbre technique du Rasengan, capture l'essence de ce jutsu emblématique dans un verre. Sa présentation spiralée et ses saveurs dynamiques représentent parfaitement la célèbre technique de chakra concentré.
+                        </p>
+                        <a href="menu.html#rasengan" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 8 -->
+                <div class="recipe-item" data-category="hot special">
+                    <div class="recipe-item-image">
+                        <img src="img/ab67616d00001e023d889ffa9b83f3fddfdabc00.jpg" alt="Shonen Spirit">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">Shonen Spirit</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Coloré</span>
+                            <span class="recipe-tag">Évolutif</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Cette boisson vibrante et colorée incarne les valeurs fondamentales du genre shonen : détermination, amitié, dépassement de soi et énergie débordante. Ses multiples couches colorées représentent les différentes étapes du parcours héroïque.
+                        </p>
+                        <a href="menu.html#shonen" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recette 9 -->
+                <div class="recipe-item" data-category="hot">
+                    <div class="recipe-item-image">
+                        <img src="img/image (2).webp" alt="Mecha Fuel">
+                    </div>
+                    <div class="recipe-item-content">
+                        <h3 class="recipe-item-title">Mecha Fuel</h3>
+                        <div class="recipe-item-tags">
+                            <span class="recipe-tag">Puissant</span>
+                            <span class="recipe-tag">Énergisant</span>
+                        </div>
+                        <p class="recipe-item-description">
+                            Cette boisson robuste et énergisante est conçue pour alimenter les pilotes avant leurs missions. Avec ses composants métalliques et son aspect industriel, elle évoque la puissance brute et la technologie avancée.
+                        </p>
+                        <a href="menu.html#mecha" class="recipe-item-link">
+                            <span>Voir la recette</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-container">
+                    <h2>Ne manquez aucune recette !</h2>
+                    <p>Abonnez-vous à notre newsletter pour recevoir nos nouvelles recettes directement dans votre boîte mail</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre adresse mail" required>
+                            <button type="submit" class="btn-subscribe">S'abonner</button>
+                        </div>
+                        <div class="form-consent">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent">J'ai lu et j'accepte les <a href="#">conditions générales</a>.</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="K-fe.png" alt="K-fee Logo" width="120" height="50">
+                    </a>
+                    <p class="footer-tagline">
+                        Votre source d'inspiration pour des recettes de café exceptionnelles et créatives.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path><path d="M21 12c0 4.418 -3.582 8 -8 8c-1.5 0 -2.897 -.37 -4.127 -1.022c-.844 .61 -1.511 1.022 -3.500 1.022c2.316 -2.151 3.627 -4.580 3.627 -8c0 -4.418 3.582 -8 8 -8s8 3.582 8 8z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="recettes.html">Recettes</a></li>
+                        <li><a href="index.html#a-propos">À propos</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-categories">
+                    <h3 class="footer-heading">Catégories</h3>
+                    <ul class="footer-links">
+                        <li><a href="recettes.html?cat=hot">Boissons chaudes</a></li>
+                        <li><a href="recettes.html?cat=cold">Boissons froides</a></li>
+                        <li><a href="recettes.html?cat=special">Créations spéciales</a></li>
+                        <li><a href="#">Nouvelles recettes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-legal">
+                    <h3 class="footer-heading">Légal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3 class="footer-heading">Restez informé</h3>
+                <p>Recevez nos dernières recettes et actualités</p>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit" aria-label="S'abonner">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; <span id="current-year">2025</span> K-fee. Tous droits réservés. Site conçu avec <span class="heart">❤</span> à Paris.
+                </p>
+            </div>
+            
+            <div class="back-to-top">
+                <a href="#" aria-label="Retour en haut">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Filtrage des recettes par catégorie
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.recipe-cat-btn');
+            const recipeItems = document.querySelectorAll('.recipe-item');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter recipes
+                    const category = button.getAttribute('data-category');
+                    
+                    recipeItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category').includes(category)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('recipe-search');
+            const searchButton = document.getElementById('search-button');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                recipeItems.forEach(item => {
+                    const title = item.querySelector('.recipe-item-title').textContent.toLowerCase();
+                    const description = item.querySelector('.recipe-item-description').textContent.toLowerCase();
+                    const tags = item.querySelector('.recipe-item-tags').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || description.includes(searchTerm) || tags.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Reset category buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                categoryButtons[0].classList.add('active');
+            }
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+
+        // Mettez à jour l'année actuelle dans le copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Fonctionnalité de retour en haut
+        document.querySelector('.back-to-top a').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

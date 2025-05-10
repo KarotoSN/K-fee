@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="menu-styles.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
 
-    <title>Menu Complet | K-fee</title>
-    <meta name="description" content="Découvrez notre menu complet de cafés et boissons inspirés par la culture pop, les mangas et les animes chez K-fee.">
+    <title>Détails des Recettes | K-fee</title>
+    <meta name="description" content="Découvrez les recettes de café K-fee étape par étape pour réaliser des boissons exceptionnelles à la maison.">
 </head>
 <body>
     <header class="header">
@@ -22,10 +20,9 @@
             <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <ul class="nav-list">
-                    <li><a href="index.html#accueil" class="nav-link">ACCUEIL</a></li>
+                    <li><a href="index.html" class="nav-link">ACCUEIL</a></li>
+                    <li><a href="recettes.html" class="nav-link active">RECETTES</a></li>
                     <li><a href="index.html#a-propos" class="nav-link">À PROPOS</a></li>
-                    <li><a href="index.html#produits" class="nav-link">PRODUITS</a></li>
-                    <li><a href="menu.html" class="nav-link active">MENU</a></li>
                     <li><a href="index.html#contact" class="nav-link">CONTACT</a></li>
                 </ul>
             </nav>
@@ -66,443 +63,1503 @@
         <div class="mobile-nav">
             <nav>
                 <ul class="mobile-nav-list">
-                    <li><a href="index.html#accueil" class="mobile-nav-link">ACCUEIL</a></li>
+                    <li><a href="index.html" class="mobile-nav-link">ACCUEIL</a></li>
+                    <li><a href="recettes.html" class="mobile-nav-link">RECETTES</a></li>
                     <li><a href="index.html#a-propos" class="mobile-nav-link">À PROPOS</a></li>
-                    <li><a href="index.html#produits" class="mobile-nav-link">PRODUITS</a></li>
-                    <li><a href="menu.html" class="mobile-nav-link">MENU</a></li>
                     <li><a href="index.html#contact" class="mobile-nav-link">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="menu-hero">
-        <div class="menu-hero-overlay"></div>
-        <div class="container">
-            <h1 class="menu-title reveal-up">Notre Menu Complet</h1>
-            <p class="menu-subtitle reveal-up-delay">Découvrez toutes nos créations inspirées de la culture pop</p>
-        </div>
-    </section>
-
-    <section class="menu-tabs">
-        <div class="container">
-            <div class="tabs-container">
-                <button class="tab-btn active" data-category="signature">Cafés Signature</button>
-                <button class="tab-btn" data-category="specials">Spécialités Manga</button>
-                <button class="tab-btn" data-category="classics">Classiques</button>
-                <button class="tab-btn" data-category="desserts">Desserts</button>
+    <main class="recipe-detail-page">
+        <!-- Navigation de retour -->
+        <div class="recipe-back-nav">
+            <div class="container">
+                <a href="recettes.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5"></path>
+                        <path d="M12 19l-7-7 7-7"></path>
+                    </svg>
+                    Retour aux recettes
+                </a>
             </div>
         </div>
-    </section>
 
-    <section class="menu-content">
-        <div class="container">
-            <!-- Cafés Signature -->
-            <div class="menu-category active" id="signature">
-                <div class="menu-header">
-                    <h2 class="category-title reveal-up">Cafés Signature</h2>
-                    <p class="category-description reveal-up-delay">Nos créations uniques inspirées des plus grands noms de la pop culture</p>
-                </div>
-
-                <div class="menu-grid">
-                    <!-- Item 1 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-image">
-                            <img src="img/b924a11332a2075fc8a64bca909c96a3.jpg" alt="La Trueno AE86">
-                            <div class="menu-item-badge">Bestseller</div>
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">La Trueno AE86</h3>
-                                <span class="menu-item-price">4,50 €</span>
-                            </div>
-                            <p class="menu-item-description">Notre café signature au goût puissant et raffiné, inspiré de la légendaire Toyota AE86. Une expérience de dégustation qui vous transportera à toute vitesse vers de nouvelles sensations.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Café Signature</span>
-                                <span class="menu-tag">Intense</span>
-                            </div>
-                        </div>
+        <!-- Recette : Le Rasengan -->
+        <section id="rasengan" class="recipe-detail">
+            <div class="container">
+                <div class="recipe-detail-header">
+                    <div class="recipe-detail-image">
+                        <img src="img/993f6a0f28ba76a0741ea2f0d5652362.jpg" alt="Le Rasengan">
                     </div>
-
-                    <!-- Item 2 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-image">
-                            <img src="img/image.webp" alt="Le Zergling">
-                            <div class="menu-item-badge">Nouveauté</div>
+                    <div class="recipe-detail-info">
+                        <h1>Le Rasengan</h1>
+                        <div class="recipe-tags">
+                            <span class="recipe-tag">Tourbillonnant</span>
+                            <span class="recipe-tag">Rafraîchissant</span>
+                            <span class="recipe-tag">Signature</span>
                         </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Le Zergling</h3>
-                                <span class="menu-item-price">5,00 €</span>
+                        <p class="recipe-intro">
+                            Notre création phare, inspirée par la célèbre technique du Rasengan. Ce café glacé aux notes d'agrumes et de vanille crée un véritable spectacle visuel avec ses couches de couleurs qui s'entremêlent en spirale, comme le chakra concentré.
+                        </p>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>10 minutes</span>
                             </div>
-                            <p class="menu-item-description">Une boisson énergisante aux notes fruitées et acidulées. Rapide à préparer et foudroyante en bouche, cette création unique vous donnera l'énergie dont vous avez besoin pour conquérir votre journée.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Énergisant</span>
-                                <span class="menu-tag">Fruité</span>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                                <span>Intermédiaire</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-image">
-                            <img src="img/image (1).jpg" alt="La Potion Teh Fortnite">
-                            <div class="menu-item-badge">Édition limitée</div>
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">La Potion Teh Fortnite</h3>
-                                <span class="menu-item-price">5,50 €</span>
-                            </div>
-                            <p class="menu-item-description">Un mélange revigorant aux couleurs vives et au goût surprenant. Cette boisson ludique et désaltérante vous redonnera de la vie et vous préparera à affronter tous les défis.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Coloré</span>
-                                <span class="menu-tag">Rafraîchissant</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-image">
-                            <img src="img/993f6a0f28ba76a0741ea2f0d5652362.jpg" alt="La Rasengan">
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">La Rasengan</h3>
-                                <span class="menu-item-price">5,20 €</span>
-                            </div>
-                            <p class="menu-item-description">Un café tourbillonnant d'énergie, avec une concentration intense de saveurs qui explose en bouche. Préparé avec notre technique spéciale, ce café vous donnera la force et la volonté de ne jamais abandonner.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Puissant</span>
-                                <span class="menu-tag">Aromatique</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-image">
-                            <img src="img/153fb13af7d4cdbb90b8d79607a1a6b8.jpg" alt="L'Ultra Instinct">
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">L'Ultra Instinct</h3>
-                                <span class="menu-item-price">5,80 €</span>
-                            </div>
-                            <p class="menu-item-description">Notre café le plus puissant, aux notes révélatrices et au potentiel illimité. Une dégustation à plusieurs niveaux qui éveillera tous vos sens et libérera votre pleine puissance intérieure.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Ultra Fort</span>
-                                <span class="menu-tag">Complexe</span>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>1 personne</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Spécialités Manga -->
-            <div class="menu-category" id="specials">
-                <div class="menu-header">
-                    <h2 class="category-title reveal-up">Spécialités Manga</h2>
-                    <p class="category-description reveal-up-delay">Des boissons aux influences japonaises pour les fans de mangas et d'anime</p>
-                </div>
+                <div class="recipe-detail-content">
+                    <div class="recipe-ingredients">
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            <li>
+                                <span class="ingredient-amount">50ml</span>
+                                <span class="ingredient-name">Espresso double</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Lait de coco</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">20ml</span>
+                                <span class="ingredient-name">Sirop de vanille</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">80ml</span>
+                                <span class="ingredient-name">Eau gazeuse</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">10ml</span>
+                                <span class="ingredient-name">Jus de citron frais</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">15ml</span>
+                                <span class="ingredient-name">Sirop de curaçao bleu</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Glaçons concassés</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="menu-grid">
-                    <!-- Item 1 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-image">
-                            <img src="img/a0514ea3c638d0b6bf13667661350f6a.jpg" alt="Sakura Matcha Latte">
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Sakura Matcha Latte</h3>
-                                <span class="menu-item-price">5,50 €</span>
+                    <div class="recipe-equipment">
+                        <h2>Équipement</h2>
+                        <ul>
+                            <li>Machine à espresso ou Moka</li>
+                            <li>Verre transparent de 300ml</li>
+                            <li>Cuillère à mélange</li>
+                            <li>Shaker (optionnel)</li>
+                            <li>Pilon à glaçons</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h2>Préparation Étape par Étape</h2>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Préparez votre espresso</h3>
+                                <p>Réalisez un double espresso avec votre machine ou cafetière Moka. Laissez-le refroidir légèrement pendant que vous préparez les autres ingrédients.</p>
                             </div>
-                            <p class="menu-item-description">Un délicat latte au matcha japonais, parfumé aux fleurs de cerisier. Une boisson équilibrée et harmonieuse qui évoque le printemps à Kyoto.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Matcha</span>
-                                <span class="menu-tag">Floral</span>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Mélangez le café et la vanille</h3>
+                                <p>Dans un récipient, mélangez l'espresso encore chaud avec le sirop de vanille pour que les arômes se marient bien. Laissez refroidir à température ambiante.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Préparez le verre</h3>
+                                <p>Remplissez votre verre de glaçons concassés jusqu'à environ la moitié. Le concassage des glaçons est important pour créer l'effet spiralé.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Créez la première couche</h3>
+                                <p>Versez délicatement le sirop de curaçao bleu sur les glaçons, en le faisant couler sur les bords du verre pour qu'il se dépose au fond.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Ajoutez la couche de lait de coco</h3>
+                                <p>À l'aide du dos d'une cuillère, versez lentement le lait de coco par-dessus pour créer une couche distincte. Maintenez la cuillère près de la surface du liquide et versez doucement pour éviter que les liquides ne se mélangent trop.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Incorporez le mélange café-vanille</h3>
+                                <p>Une fois le mélange café-vanille refroidi, versez-le doucement sur la couche de lait de coco en utilisant à nouveau la technique de la cuillère pour maintenir les couches distinctes.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Finalisation du Rasengan</h3>
+                                <p>Mélangez le jus de citron avec l'eau gazeuse et versez ce mélange pour compléter votre boisson. Pour l'effet tourbillonnant caractéristique du Rasengan, utilisez une longue cuillère en effectuant un mouvement spiralé rapide, de bas en haut, avant de servir.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Servir</h3>
+                                <p>Servez immédiatement avec une paille, et appréciez les différentes couches qui se mêlent progressivement lors de la dégustation, créant l'effet visuel et gustatif du tourbillon énergétique.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-image">
-                            <img src="img/ae3e7456a98add3d7617333a627c3e18.jpg" alt="Titan Brew">
-                            <div class="menu-item-badge">Colossal</div>
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Titan Brew</h3>
-                                <span class="menu-item-price">6,00 €</span>
-                            </div>
-                            <p class="menu-item-description">Une boisson colossale et puissante, servie fumante dans une grande tasse. Ce mélange de cafés d'origines diverses est aussi complexe que mystérieux, avec des notes épicées et terreuses.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Extra Large</span>
-                                <span class="menu-tag">Épicé</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-image">
-                            <img src="img/ab67616d00001e023d889ffa9b83f3fddfdabc00.jpg" alt="Shonen Spirit">
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Shonen Spirit</h3>
-                                <span class="menu-item-price">5,30 €</span>
-                            </div>
-                            <p class="menu-item-description">Un café dynamique aux multiples couches de saveurs qui se révèlent au fil de la dégustation. Notre recette évolue chaque saison, comme un bon manga qui progresse d'arc en arc.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Dynamique</span>
-                                <span class="menu-tag">Évolutif</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-image">
-                            <img src="img/image (2).webp" alt="Mecha Fuel">
-                        </div>
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Mecha Fuel</h3>
-                                <span class="menu-item-price">5,80 €</span>
-                            </div>
-                            <p class="menu-item-description">Le carburant parfait pour votre journée, cette boisson énergisante combine café, matcha et guarana pour une expérience mécanique de précision qui stimulera tous vos systèmes.</p>
-                            <div class="menu-item-tags">
-                                <span class="menu-tag">Haute Énergie</span>
-                                <span class="menu-tag">Technologique</span>
-                            </div>
-                        </div>
+                    <div class="recipe-tips">
+                        <h2>Conseils</h2>
+                        <ul>
+                            <li>Pour un effet visuel encore plus impressionnant, vous pouvez ajouter une touche de colorant alimentaire bleu à la couche de lait de coco.</li>
+                            <li>Si vous ne disposez pas de sirop de curaçao bleu, vous pouvez utiliser un autre sirop bleu ou même du sirop de grenadine pour une variante "Rasengan rouge".</li>
+                            <li>La qualité de l'espresso influence considérablement le goût final - privilégiez un café aux notes chocolatées ou fruitées.</li>
+                            <li>Cette boisson est idéale par temps chaud et peut être préparée en plus grande quantité pour plusieurs personnes.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Classiques -->
-            <div class="menu-category" id="classics">
-                <div class="menu-header">
-                    <h2 class="category-title reveal-up">Classiques</h2>
-                    <p class="category-description reveal-up-delay">Les grands classiques du café, préparés avec notre touche unique</p>
+        <!-- Recette : La Trueno D'Akina -->
+        <section id="trueno" class="recipe-detail">
+            <div class="container">
+                <div class="recipe-detail-header">
+                    <div class="recipe-detail-image">
+                        <img src="img/b924a11332a2075fc8a64bca909c96a3.jpg" alt="La Trueno D'Akina">
+                    </div>
+                    <div class="recipe-detail-info">
+                        <h1>La Trueno D'Akina</h1>
+                        <div class="recipe-tags">
+                            <span class="recipe-tag">Intense</span>
+                            <span class="recipe-tag">Stratifié</span>
+                            <span class="recipe-tag">Bestseller</span>
+                        </div>
+                        <p class="recipe-intro">
+                            Un café stratifié noir et blanc inspiré de la légendaire AE86. Cette création audacieuse offre une expérience de dégustation qui évolue à chaque gorgée, passant de notes intenses à des saveurs plus douces.
+                        </p>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>8 minutes</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                                <span>Facile</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>1 personne</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-grid">
-                    <!-- Item 1 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Espresso</h3>
-                                <span class="menu-item-price">2,20 €</span>
+                <div class="recipe-detail-content">
+                    <div class="recipe-ingredients">
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            <li>
+                                <span class="ingredient-amount">40ml</span>
+                                <span class="ingredient-name">Espresso intense</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">100ml</span>
+                                <span class="ingredient-name">Lait entier</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Crème liquide</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">15g</span>
+                                <span class="ingredient-name">Sucre</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">5g</span>
+                                <span class="ingredient-name">Chocolat noir râpé</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Glaçons (pour servir)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-equipment">
+                        <h2>Équipement</h2>
+                        <ul>
+                            <li>Machine à espresso ou cafetière forte</li>
+                            <li>Verre transparent haut (type latte)</li>
+                            <li>Cuillère à mélange</li>
+                            <li>Petite casserole</li>
+                            <li>Râpe à chocolat</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h2>Préparation Étape par Étape</h2>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Préparez l'espresso</h3>
+                                <p>Réalisez un espresso intense avec votre machine. L'intensité est cruciale pour représenter la puissance du moteur de la Trueno.</p>
                             </div>
-                            <p class="menu-item-description">Notre espresso signature, corsé et équilibré, avec des notes de chocolat noir et de noisettes torréfiées.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Sucrez le café</h3>
+                                <p>Ajoutez immédiatement le sucre à l'espresso chaud et mélangez jusqu'à dissolution complète. Laissez refroidir légèrement.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Préparez le lait</h3>
+                                <p>Dans une petite casserole, faites chauffer le lait jusqu'à ce qu'il soit tiède, sans le faire bouillir.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Préparez la crème</h3>
+                                <p>Laissez la crème liquide à température ambiante pour faciliter la stratification.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Assemblez la boisson</h3>
+                                <p>Dans un verre haut, mettez quelques glaçons. Versez délicatement le café sucré refroidi.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Créez la stratification</h3>
+                                <p>À l'aide du dos d'une cuillère, versez très lentement le lait tiède sur le café pour créer une couche distincte. Le lait doit flotter sur le café (comme la peinture blanche sur le noir de la AE86).</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Ajoutez la touche finale</h3>
+                                <p>Pour terminer, versez délicatement la crème sur le dessus. Idéalement, vous aurez trois couches distinctes : le café noir en bas, le lait au milieu et la crème blanche sur le dessus.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Décorez et servez</h3>
+                                <p>Saupoudrez légèrement de chocolat noir râpé sur le dessus et servez immédiatement avec une paille longue pour apprécier chaque couche.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Cappuccino</h3>
-                                <span class="menu-item-price">3,80 €</span>
-                            </div>
-                            <p class="menu-item-description">Un espresso parfaitement équilibré avec du lait mousseux, créant une texture veloutée et une expérience de dégustation harmonieuse.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Latte</h3>
-                                <span class="menu-item-price">4,00 €</span>
-                            </div>
-                            <p class="menu-item-description">Notre espresso adouci par une généreuse quantité de lait crémeux, pour une boisson douce et réconfortante.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Café Américain</h3>
-                                <span class="menu-item-price">3,50 €</span>
-                            </div>
-                            <p class="menu-item-description">Un espresso allongé à l'eau chaude, offrant une boisson plus légère tout en préservant les arômes complexes de notre café.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Chocolat Chaud</h3>
-                                <span class="menu-item-price">4,20 €</span>
-                            </div>
-                            <p class="menu-item-description">Un riche mélange de chocolat belge fondu dans du lait chaud, garni de crème fouettée et de copeaux de chocolat.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Chai Latte</h3>
-                                <span class="menu-item-price">4,50 €</span>
-                            </div>
-                            <p class="menu-item-description">Un mélange épicé de thé noir, cardamome, cannelle et autres épices, adouci avec du lait mousseux pour une expérience exotique.</p>
-                        </div>
+                    <div class="recipe-tips">
+                        <h2>Conseils</h2>
+                        <ul>
+                            <li>La température est la clé de la stratification : le café doit être plus froid que le lait pour que les couches restent séparées.</li>
+                            <li>Pour un effet visuel encore plus marqué, utilisez une cuillère à café pour créer une légère marbrure entre le noir et le blanc, représentant les virages serrés de la montagne Akina.</li>
+                            <li>Vous pouvez remplacer le sucre par du sirop de caramel pour une note plus profonde.</li>
+                            <li>Pour une version sans caféine, utilisez du décaféiné - l'effet visuel sera le même.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Desserts -->
-            <div class="menu-category" id="desserts">
-                <div class="menu-header">
-                    <h2 class="category-title reveal-up">Desserts</h2>
-                    <p class="category-description reveal-up-delay">Des douceurs pour accompagner votre café</p>
+        <!-- Recette : Le Zergling -->
+        <section id="zergling" class="recipe-detail">
+            <div class="container">
+                <div class="recipe-detail-header">
+                    <div class="recipe-detail-image">
+                        <img src="img/image.webp" alt="Le Zergling">
+                    </div>
+                    <div class="recipe-detail-info">
+                        <h1>Le Zergling</h1>
+                        <div class="recipe-tags">
+                            <span class="recipe-tag">Fruité</span>
+                            <span class="recipe-tag">Explosif</span>
+                            <span class="recipe-tag">Énergisant</span>
+                        </div>
+                        <p class="recipe-intro">
+                            Une boisson énergisante aux notes fruitées et acidulées. Rapide à préparer et foudroyante en bouche, cette création unique vous donnera l'énergie dont vous avez besoin pour conquérir votre journée.
+                        </p>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>7 minutes</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>1 personne</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-grid">
-                    <!-- Item 1 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Dorayaki</h3>
-                                <span class="menu-item-price">3,80 €</span>
+                <div class="recipe-detail-content">
+                    <div class="recipe-ingredients">
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            <li>
+                                <span class="ingredient-amount">60ml</span>
+                                <span class="ingredient-name">Espresso double concentré</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">20ml</span>
+                                <span class="ingredient-name">Sirop d'agave</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">15ml</span>
+                                <span class="ingredient-name">Jus de citron vert frais</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Jus de cranberry</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">60ml</span>
+                                <span class="ingredient-name">Eau gazeuse</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1/4 c. à café</span>
+                                <span class="ingredient-name">Guarana en poudre (optionnel)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Glaçons</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Tranches de citron vert pour la décoration</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-equipment">
+                        <h2>Équipement</h2>
+                        <ul>
+                            <li>Machine à espresso</li>
+                            <li>Shaker ou verre mélangeur</li>
+                            <li>Verre bas de type "rocks"</li>
+                            <li>Presse-agrumes</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h2>Préparation Étape par Étape</h2>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Préparez un espresso concentré</h3>
+                                <p>Réalisez un double espresso très concentré, qui représente la force pure du Zergling.</p>
                             </div>
-                            <p class="menu-item-description">Pâtisserie japonaise traditionnelle composée de deux pancakes moelleux fourrés à la pâte de haricot rouge.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Refroidissez rapidement</h3>
+                                <p>Placez l'espresso dans le shaker avec quelques glaçons et secouez énergiquement pour le refroidir rapidement (comme la rapidité d'éclosion des Zerglings).</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Intégrez les éléments énergisants</h3>
+                                <p>Filtrez les glaçons et ajoutez le sirop d'agave et le guarana en poudre (si utilisé) dans le shaker avec l'espresso refroidi. Secouez à nouveau pour bien mélanger.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Préparez votre verre</h3>
+                                <p>Remplissez un verre bas de glaçons frais.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Créez la base explosive</h3>
+                                <p>Versez le mélange espresso-agave-guarana dans le verre, sur les glaçons.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Ajoutez l'acidité</h3>
+                                <p>Ajoutez le jus de citron vert frais et le jus de cranberry, qui représentent l'aspect acide et agressif des Zerglings.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Finalisez avec l'effervescence</h3>
+                                <p>Complétez avec l'eau gazeuse en versant doucement sur le dos d'une cuillère pour créer une légère effervescence en surface.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Décorez et servez</h3>
+                                <p>Garnissez avec une fine tranche de citron vert et servez immédiatement, avant que l'énergie ne se dissipe!</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Taiyaki</h3>
-                                <span class="menu-item-price">4,20 €</span>
+                    <div class="recipe-tips">
+                        <h2>Conseils</h2>
+                        <ul>
+                            <li>Pour une explosion encore plus intense de saveurs, ajoutez un peu de zeste de citron vert râpé au moment de servir.</li>
+                            <li>Si vous n'avez pas de guarana, vous pouvez utiliser une pincée de gingembre en poudre pour un effet énergisant similaire.</li>
+                            <li>Pour une version moins acidulée, remplacez le jus de cranberry par du jus de cerise noire.</li>
+                            <li>Cette boisson est parfaite pour les matins difficiles ou avant une activité physique intense.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recette : Le Titan Brew -->
+        <section id="titan" class="recipe-detail">
+            <div class="container">
+                <div class="recipe-detail-header">
+                    <div class="recipe-detail-image">
+                        <img src="img/image (2).webp" alt="Le Titan Brew">
+                    </div>
+                    <div class="recipe-detail-info">
+                        <h1>Le Titan Brew</h1>
+                        <div class="recipe-tags">
+                            <span class="recipe-tag">Imposant</span>
+                            <span class="recipe-tag">Puissant</span>
+                            <span class="recipe-tag">Complexe</span>
+                        </div>
+                        <p class="recipe-intro">
+                            Cette boisson imposante et puissante rend hommage aux Titans de la célèbre série. Sa taille généreuse et ses saveurs multiples évoquent la puissance et la complexité de ces créatures emblématiques.
+                        </p>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>12 minutes</span>
                             </div>
-                            <p class="menu-item-description">Gâteau japonais en forme de poisson, garni au choix de pâte de haricot rouge, de custard ou de chocolat.</p>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>1 personne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-detail-content">
+                    <div class="recipe-ingredients">
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            <li>
+                                <span class="ingredient-amount">60ml</span>
+                                <span class="ingredient-name">Espresso corsé (double shot)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Sirop de caramel salé</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">150ml</span>
+                                <span class="ingredient-name">Lait entier (ou lait d'amande)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">60ml</span>
+                                <span class="ingredient-name">Crème fraîche</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 c. à café</span>
+                                <span class="ingredient-name">Poudre de cannelle</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Poudre de cacao noir</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Éclats de chocolat noir</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Sirop de framboise (facultatif)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Glaçons</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-equipment">
+                        <h2>Équipement</h2>
+                        <ul>
+                            <li>Machine à espresso</li>
+                            <li>Très grand verre transparent</li>
+                            <li>Shaker</li>
+                            <li>Paille extra-longue</li>
+                            <li>Cuillère longue</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h2>Préparation Étape par Étape</h2>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Préparez l'espresso</h3>
+                                <p>Réalisez un double espresso corsé et versez-le immédiatement dans un grand verre transparent.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Ajoutez le sirop de caramel</h3>
+                                <p>Incorporez le sirop de caramel salé à l'espresso et mélangez bien pour que les saveurs se marient.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Ajoutez les glaçons</h3>
+                                <p>Remplissez le verre de glaçons jusqu'à environ la moitié de sa hauteur.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Préparez le lait à la cannelle</h3>
+                                <p>Dans un shaker, mélangez le lait avec une pincée de cannelle pour ajouter une touche épicée qui évoquera la nature sauvage des Titans.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Créez la couche contrastée</h3>
+                                <p>Versez délicatement ce mélange de lait à la cannelle sur l'espresso, en utilisant le dos d'une cuillère pour créer une belle couche contrastée, comme les murs qui protègent l'humanité.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Préparez la crème</h3>
+                                <p>Fouettez légèrement la crème fraîche jusqu'à ce qu'elle soit juste épaissie mais encore coulante.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Ajoutez la couche supérieure</h3>
+                                <p>Déposez délicatement la crème fouettée sur le dessus du verre pour former une couche nuageuse qui représente les hauts murs de la cité.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Finalisez avec les garnitures</h3>
+                                <p>Saupoudrez généreusement de cacao noir pour représenter la terre et parsemez d'éclats de chocolat noir. Pour une touche finale dramatique, ajoutez quelques gouttes de sirop de framboise sur la crème, évoquant le sang et le dramatisme de la série.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Cheesecake Japonais</h3>
-                                <span class="menu-item-price">5,50 €</span>
+                    <div class="recipe-tips">
+                        <h2>Conseils</h2>
+                        <ul>
+                            <li>Pour un effet visuel encore plus impressionnant, utilisez un verre extrêmement grand, comme ceux utilisés pour les cocktails de groupe.</li>
+                            <li>Les différentes couches représentent les murs concentriques de la cité. Veillez à les verser délicatement pour maintenir leur séparation.</li>
+                            <li>Pour une version sans caféine, remplacez l'espresso par du café décaféiné corsé.</li>
+                            <li>Le contraste entre l'amertume du café et la douceur du caramel symbolise le conflit entre la brutalité des Titans et l'espoir de l'humanité.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recette : Le Sakura Matcha Latte -->
+        <section id="sakura" class="recipe-detail">
+            <div class="container">
+                <div class="recipe-detail-header">
+                    <div class="recipe-detail-image">
+                        <img src="img/a0514ea3c638d0b6bf13667661350f6a.jpg" alt="Sakura Matcha Latte">
+                    </div>
+                    <div class="recipe-detail-info">
+                        <h1>Le Sakura Matcha Latte</h1>
+                        <div class="recipe-tags">
+                            <span class="recipe-tag">Floral</span>
+                            <span class="recipe-tag">Élégant</span>
+                            <span class="recipe-tag">Japonais</span>
+                        </div>
+                        <p class="recipe-intro">
+                            Cette boisson délicate et harmonieuse célèbre deux symboles emblématiques du Japon : le matcha et les fleurs de cerisier (sakura). Avec ses douces nuances de rose et de vert, elle évoque la beauté éphémère du hanami, la traditionnelle contemplation des cerisiers en fleurs.
+                        </p>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>15 minutes</span>
                             </div>
-                            <p class="menu-item-description">Un cheesecake aérien et léger, à la texture soufflée, accompagné de coulis de fruits rouges.</p>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>1 personne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-detail-content">
+                    <div class="recipe-ingredients">
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            <li>
+                                <span class="ingredient-amount">1 c. à café</span>
+                                <span class="ingredient-name">Poudre de matcha de qualité supérieure</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">20ml</span>
+                                <span class="ingredient-name">Eau chaude (80°C)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">15ml</span>
+                                <span class="ingredient-name">Sirop de fleur de cerisier (ou sirop de sakura)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">150ml</span>
+                                <span class="ingredient-name">Lait d'amande (ou lait de votre choix)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Crème légère</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 pincée</span>
+                                <span class="ingredient-name">Sel rose de l'Himalaya</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 c. à café</span>
+                                <span class="ingredient-name">Sucre de fleur de coco (ou sucre blanc)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">Quelques gouttes</span>
+                                <span class="ingredient-name">Extrait de vanille</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Pétales de fleurs comestibles séchées (pour la décoration)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Branche de fleur de cerisier en sucre (pour la décoration)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-equipment">
+                        <h2>Équipement</h2>
+                        <ul>
+                            <li>Chasen (fouet à matcha traditionnel) ou petit fouet</li>
+                            <li>Bol à matcha</li>
+                            <li>Tamis fin</li>
+                            <li>Petite casserole</li>
+                            <li>Verre transparent aux lignes épurées</li>
+                            <li>Cuillère longue</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h2>Préparation Étape par Étape</h2>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Préparez le matcha</h3>
+                                <p>Dans un bol, tamisez soigneusement la poudre de matcha pour éviter les grumeaux. Cette étape est essentielle pour obtenir une texture parfaitement lisse.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Fouettez le matcha</h3>
+                                <p>Versez l'eau chaude (à 80°C, pas bouillante) sur le matcha et fouettez en forme de W avec un chasen ou un petit fouet jusqu'à obtenir une pâte lisse et mousseuse sans grumeaux.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Préparez le lait parfumé</h3>
+                                <p>Dans une petite casserole, faites chauffer le lait d'amande avec le sirop de fleur de cerisier, le sel rose et le sucre. Chauffez à feu doux sans faire bouillir pour préserver les arômes délicats.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Créez la mousse</h3>
+                                <p>Fouettez légèrement le mélange de lait pour créer une mousse délicate. Cette texture aérienne ajoutera une dimension supplémentaire à votre boisson.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Préparez le verre</h3>
+                                <p>Dans un verre élégant, versez le sirop de fleur de cerisier le long des parois pour créer un effet délicat de cascade rose sur les bords du verre.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Assemblez les couches</h3>
+                                <p>Versez doucement le mélange de matcha au fond du verre. Puis, ajoutez délicatement le lait chaud en utilisant le dos d'une cuillère pour créer une belle séparation des couches verte et rose.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Finaliser avec la crème</h3>
+                                <p>Mélangez la crème légère avec quelques gouttes d'extrait de vanille et déposez-la délicatement sur le dessus en formant un nuage blanc légèrement teinté de rose.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Décorez et servez</h3>
+                                <p>Pour la touche finale, décorez avec quelques pétales de fleurs comestibles séchées et une petite branche de fleur de cerisier en sucre. Servez immédiatement avec une cuillère longue pour pouvoir mélanger les saveurs au moment de la dégustation.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Item 4 -->
-                    <div class="menu-item reveal-right">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Mochi Glacé</h3>
-                                <span class="menu-item-price">4,50 €</span>
+                    <div class="recipe-tips">
+                        <h2>Conseils</h2>
+                        <ul>
+                            <li>La qualité du matcha est cruciale - choisissez un matcha de grade cérémonial pour une saveur optimale et une belle couleur verte intense.</li>
+                            <li>Si vous ne trouvez pas de sirop de fleur de cerisier, vous pouvez utiliser quelques gouttes d'eau de rose mélangées à un sirop simple avec une touche de colorant alimentaire rose.</li>
+                            <li>Le sel rose de l'Himalaya renforce subtilement les saveurs sans ajouter de salinité perceptible - ne l'omettez pas !</li>
+                            <li>Servez dans un verre transparent pour apprécier pleinement les couches de couleur qui font partie intégrante de l'expérience.</li>
+                            <li>Cette boisson incarne l'esthétique japonaise du "mono no aware" - l'appréciation de la beauté éphémère, parfaite pour une dégustation contemplative.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recette : Le Shonen Spirit -->
+        <section id="shonen" class="recipe-detail">
+            <div class="container">
+                <div class="recipe-detail-header">
+                    <div class="recipe-detail-image">
+                        <img src="img/ae3e7456a98add3d7617333a627c3e18.jpg" alt="Le Shonen Spirit">
+                    </div>
+                    <div class="recipe-detail-info">
+                        <h1>Le Shonen Spirit</h1>
+                        <div class="recipe-tags">
+                            <span class="recipe-tag">Énergétique</span>
+                            <span class="recipe-tag">Coloré</span>
+                            <span class="recipe-tag">Inspirant</span>
+                        </div>
+                        <p class="recipe-intro">
+                            Cette boisson vibrante et colorée incarne les valeurs fondamentales du genre shonen : détermination, amitié, dépassement de soi et énergie débordante. Ses multiples couches colorées représentent les différentes étapes du parcours héroïque typique des protagonistes de shonen, tandis que son goût évolue progressivement, symbolisant la progression et la transformation du héros.
+                        </p>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>15 minutes</span>
                             </div>
-                            <p class="menu-item-description">Boule de glace enveloppée dans une pâte de riz gluant. Parfums disponibles : matcha, sakura, mangue, chocolat.</p>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>1 personne</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recipe-detail-content">
+                    <div class="recipe-ingredients">
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            <li>
+                                <span class="ingredient-amount">40ml</span>
+                                <span class="ingredient-name">Espresso corsé</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Sirop de caramel</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">20ml</span>
+                                <span class="ingredient-name">Sirop de fruits de la passion</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">20ml</span>
+                                <span class="ingredient-name">Sirop de fraise</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">15ml</span>
+                                <span class="ingredient-name">Sirop de citron</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">60ml</span>
+                                <span class="ingredient-name">Lait entier</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">40ml</span>
+                                <span class="ingredient-name">Jus d'orange frais</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Crème légèrement fouettée</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Glaçons</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Poudre d'or alimentaire</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Étoiles en sucre colorées</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Fine tranche d'orange</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-equipment">
+                        <h2>Équipement</h2>
+                        <ul>
+                            <li>Machine à espresso</li>
+                            <li>Verre haut et transparent</li>
+                            <li>Cuillère longue</li>
+                            <li>Presse-agrumes</li>
+                            <li>Paille colorée</li>
+                            <li>Petit fouet (pour la crème)</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h2>Préparation Étape par Étape</h2>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Préparez la base</h3>
+                                <p>Dans un verre haut et transparent, disposez des glaçons pour préparer le terrain de l'aventure.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Créez la fondation du héros</h3>
+                                <p>Préparez l'espresso et mélangez-le immédiatement avec le sirop de caramel. Ce mélange représente la "base" solide du héros, ses valeurs fondamentales et son caractère.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Établissez la première couche</h3>
+                                <p>Versez délicatement ce mélange espresso-caramel au fond du verre, sur les glaçons. C'est le point de départ du voyage.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Ajoutez la zone de confort</h3>
+                                <p>À l'aide du dos d'une cuillère, versez lentement le lait pour créer une couche distincte de couleur claire. Cette couche symbolise la zone de confort que le héros devra dépasser pour grandir.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Incorporez l'énergie dorée</h3>
+                                <p>Mélangez le sirop de fruits de la passion avec le jus d'orange frais et versez doucement sur le dos d'une cuillère pour former une couche dorée éclatante. Cette teinte représente l'énergie et la force intérieure que le héros découvre lors de ses premiers défis.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Ajoutez la couche de passion</h3>
+                                <p>Versez ensuite délicatement une couche de sirop de fraise pur, en utilisant toujours la technique du dos de la cuillère. Le rouge vif symbolise la passion, le combat et la détermination face aux épreuves.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Couronnez de vivacité</h3>
+                                <p>Complétez avec une couche de sirop de citron légèrement dilué avec un peu d'eau. Cette touche acidulée représente la fraîcheur d'esprit et la vivacité mentale nécessaires pour surmonter les obstacles.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Symbolisez la victoire</h3>
+                                <p>Couronnez le tout d'une touche de crème légèrement fouettée, comme un nuage célébrant la victoire après tant d'efforts.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">9</div>
+                            <div class="step-content">
+                                <h3>Finalisez avec éclat</h3>
+                                <p>Saupoudrez de poudre d'or alimentaire sur la crème pour évoquer la transformation finale du héros, l'atteinte de sa forme ultime. Décorez avec quelques étoiles en sucre colorées et une fine tranche d'orange sur le bord du verre.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Item 5 -->
-                    <div class="menu-item reveal-left">
-                        <div class="menu-item-content">
-                            <div class="menu-item-header">
-                                <h3 class="menu-item-title">Cookie Pixel Art</h3>
-                                <span class="menu-item-price">3,90 €</span>
+                    <div class="recipe-tips">
+                        <h2>Conseils</h2>
+                        <ul>
+                            <li>Pour apprécier pleinement cette boisson, admirez d'abord ses couches distinctes avant de la déguster - tout comme l'arc narratif d'un manga shonen qui se dévoile progressivement.</li>
+                            <li>Utilisez la longue cuillère pour mélanger progressivement les couches pendant la dégustation, découvrant ainsi de nouvelles saveurs - comme le héros qui découvre de nouveaux pouvoirs au fil de son parcours.</li>
+                            <li>L'amertume initiale du café représente les difficultés du début, la douceur du caramel et du lait symbolise le soutien des amis, tandis que les notes fruitées évoquent les différentes aventures vécues.</li>
+                            <li>Pour une version non caféinée adaptée aux plus jeunes fans, remplacez l'espresso par un chocolat noir intense.</li>
+                            <li>Si vous souhaitez accentuer l'effet visuel des couches, versez chaque ingrédient très lentement en inclinant légèrement le verre.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recette : Le Mecha Fuel -->
+        <section id="mecha" class="recipe-detail">
+            <div class="container">
+                <div class="recipe-detail-header">
+                    <div class="recipe-detail-image">
+                        <img src="img/baf3dd926d2ae6888b92038298eda2b5.jpg" alt="Le Mecha Fuel">
+                    </div>
+                    <div class="recipe-detail-info">
+                        <h1>Le Mecha Fuel</h1>
+                        <div class="recipe-tags">
+                            <span class="recipe-tag">Puissant</span>
+                            <span class="recipe-tag">Industriel</span>
+                            <span class="recipe-tag">Énergisant</span>
+                        </div>
+                        <p class="recipe-intro">
+                            Cette boisson robuste et énergisante est conçue pour alimenter les pilotes de mechas avant leurs missions. Avec ses composants métalliques et son aspect industriel, elle évoque la puissance brute et la technologie avancée des robots géants de la science-fiction japonaise. Sa combinaison unique de saveurs et son effet stimulant en font le carburant parfait pour affronter les défis les plus redoutables.
+                        </p>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>12 minutes</span>
                             </div>
-                            <p class="menu-item-description">Cookie artisanal décoré en pixel art, inspiré des personnages de jeux vidéo rétro.</p>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="meta-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>1 personne</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="recipe-detail-content">
+                    <div class="recipe-ingredients">
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            <li>
+                                <span class="ingredient-amount">60ml</span>
+                                <span class="ingredient-name">Espresso triple (intensité maximale)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">30ml</span>
+                                <span class="ingredient-name">Sirop de caramel salé</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">20ml</span>
+                                <span class="ingredient-name">Sirop de noisette</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">40ml</span>
+                                <span class="ingredient-name">Lait de coco</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">50ml</span>
+                                <span class="ingredient-name">Eau tonique</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">15ml</span>
+                                <span class="ingredient-name">Jus de citron vert</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 pincée</span>
+                                <span class="ingredient-name">Sel bleu (ou sel ordinaire coloré en bleu)</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1 pincée</span>
+                                <span class="ingredient-name">Poudre de gingembre</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Glaçons</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1</span>
+                                <span class="ingredient-name">Bâton de cannelle</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">1</span>
+                                <span class="ingredient-name">Fine tranche de citron vert</span>
+                            </li>
+                            <li>
+                                <span class="ingredient-amount">-</span>
+                                <span class="ingredient-name">Quelques grains de poivre noir concassés</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-equipment">
+                        <h2>Équipement</h2>
+                        <ul>
+                            <li>Machine à espresso</li>
+                            <li>Shaker métallique</li>
+                            <li>Verre robuste de forme angulaire</li>
+                            <li>Paille métallique réutilisable</li>
+                            <li>Sous-verre hexagonal (si disponible)</li>
+                            <li>Pilon à épices</li>
+                        </ul>
+                    </div>
+
+                    <div class="recipe-steps">
+                        <h2>Préparation Étape par Étape</h2>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Préparez le carburant de base</h3>
+                                <p>Réalisez un espresso corsé triple et laissez-le refroidir légèrement. Cette base puissante représente le cœur énergétique du mecha.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Activez le mélange principal</h3>
+                                <p>Dans un shaker métallique, versez l'espresso encore chaud avec le sirop de caramel salé, le sirop de noisette et le lait de coco. Ces éléments constituent le système principal d'alimentation.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Intégrez les catalyseurs</h3>
+                                <p>Ajoutez la pincée de sel bleu et la poudre de gingembre au mélange. Ces éléments agissent comme des catalyseurs pour activer les saveurs et l'énergie de la boisson.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Initiez la séquence d'émulsion</h3>
+                                <p>Secouez vigoureusement le shaker pour créer une émulsion dense. L'agitation représente le démarrage des systèmes internes du mecha, mélangeant les composants en une force unifiée.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Préparez la chambre de refroidissement</h3>
+                                <p>Dans un verre robuste de forme angulaire (idéalement métallique ou d'aspect industriel), placez des glaçons qui serviront de système de refroidissement pour le carburant.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h3>Transférez le mélange principal</h3>
+                                <p>Versez le mélange émulsionné du shaker sur les glaçons. Observez la façon dont le liquide s'écoule entre les glaçons comme du carburant de haute performance.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">7</div>
+                            <div class="step-content">
+                                <h3>Activez le système d'effervescence</h3>
+                                <p>Ajoutez délicatement l'eau tonique pour créer un effet d'activation similaire au démarrage d'un mecha. Les bulles qui remontent représentent l'énergie qui circule dans les circuits du robot.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">
+                                <h3>Intégrez le catalyseur acide</h3>
+                                <p>Incorporez le jus de citron vert qui agira comme un "catalyseur" pour l'ensemble des saveurs, intensifiant la complexité de la boisson comme un amplificateur de puissance.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">9</div>
+                            <div class="step-content">
+                                <h3>Assemblez les composants finaux</h3>
+                                <p>Saupoudrez quelques grains de poivre noir concassés sur le dessus pour représenter des composants mécaniques et insérez le bâton de cannelle verticalement pour évoquer une antenne ou un levier de commande du mecha.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">10</div>
+                            <div class="step-content">
+                                <h3>Finalisez et servez</h3>
+                                <p>Garnissez avec la fine tranche de citron vert sur le bord du verre, comme un élément de l'interface de contrôle. Servez immédiatement, accompagné d'une paille métallique et posé sur un sous-verre hexagonal pour compléter l'esthétique mécanique.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-tips">
+                        <h2>Conseils</h2>
+                        <ul>
+                            <li>Pour un effet visuel encore plus impressionnant, vous pouvez ajouter quelques gouttes de colorant alimentaire bleu dans l'eau tonique pour créer un effet "réacteur à énergie".</li>
+                            <li>Le choix du contenant est essentiel : privilégiez des verres angulaires, à facettes ou métalliques pour renforcer l'esthétique robotique.</li>
+                            <li>Pour une version encore plus énergisante, vous pouvez remplacer l'eau tonique par une boisson énergisante légère.</li>
+                            <li>Si vous ne trouvez pas de sel bleu, vous pouvez utiliser du sel ordinaire avec une touche de colorant alimentaire bleu.</li>
+                            <li>Pour une expérience complète, servez la boisson en prononçant "Protocole d'activation lancé !" pour ajouter une dimension ludique.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Autres recettes à ajouter suivant le même modèle -->
+
+        <div class="other-recipes">
+            <div class="container">
+                <h2>Autres Recettes</h2>
+                <div class="recipe-grid minimal-grid">
+                    <!-- Les autres recettes en format compact pour la navigation -->
+                </div>
+                <div class="view-all-link">
+                    <a href="recettes.html">Voir toutes les recettes</a>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section class="menu-cta">
+    <footer class="footer-minimal">
         <div class="container">
-            <div class="cta-content reveal-up">
-                <h2>Envie de découvrir nos créations ?</h2>
-                <p>Venez nous rendre visite ou commandez en ligne !</p>
-                <div class="cta-buttons">
-                    <a href="index.html#location" class="btn btn-primary">Nous trouver</a>
-                    <a href="#" class="btn btn-outline">Commander en ligne</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+            <div class="footer-grid-minimal">
                 <div class="footer-brand">
-                    <a href="#" class="footer-logo">
+                    <a href="index.html" class="footer-logo">
                         <img src="K-fe.png" alt="K-fee Logo" width="120" height="50">
                     </a>
-                    <p class="footer-tagline">
-                        Café de spécialité inspiré de la culture pop, pour des moments de dégustation uniques.
-                    </p>
+                    <p>Votre source d'inspiration pour des recettes de café exceptionnelles.</p>
                 </div>
                 
                 <div class="footer-nav">
-                    <h3 class="footer-heading">Navigation</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html#accueil">Accueil</a></li>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="recettes.html">Recettes</a></li>
                         <li><a href="index.html#a-propos">À propos</a></li>
-                        <li><a href="index.html#produits">Produits</a></li>
-                        <li><a href="menu.html">Menu</a></li>
                         <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-legal">
-                    <h3 class="footer-heading">Légal</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                        <li><a href="#">Conditions générales</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-hours">
-                    <h3 class="footer-heading">Horaires</h3>
-                    <ul class="footer-hours-list">
-                        <li>Lundi - Vendredi: 7h30 - 20h00</li>
-                        <li>Samedi - Dimanche: 8h00 - 21h00</li>
-                    </ul>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: contact@k-fee.fr</p>
+                    <p>Tél: +33 1 23 45 67 89</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="copyright">
-                    &copy; <span id="current-year"></span> K-fee. Tous droits réservés.
-                </p>
-                <p class="footer-tagline-small">
-                    Fait avec 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#e25555" stroke="#e25555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg>
-                    et
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="coffee-icon">
-                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                        <line x1="6" y1="1" x2="6" y2="4"></line>
-                        <line x1="10" y1="1" x2="10" y2="4"></line>
-                        <line x1="14" y1="1" x2="14" y2="4"></line>
-                    </svg>
-                </p>
+                <p>&copy; <span id="current-year">2025</span> K-fee. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
     <script src="main.js"></script>
-    <script src="menu.js"></script>
+    <script>
+        // Mise à jour de l'année courante dans le footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Fonction pour afficher la recette correspondant à l'ancre
+            function showRecipeBasedOnHash() {
+                const recipeDetails = document.querySelectorAll('.recipe-detail');
+                const hash = window.location.hash;
+                
+                if (hash) {
+                    let recipeFound = false;
+                    recipeDetails.forEach(detail => {
+                        if (detail.id === hash.substring(1)) {
+                            detail.style.display = 'block';
+                            recipeFound = true;
+                        } else {
+                            detail.style.display = 'none';
+                        }
+                    });
+                    
+                    // Scroll to recipe
+                    if (recipeFound) {
+                        const recipe = document.querySelector(hash);
+                        if (recipe) {
+                            setTimeout(() => {
+                                window.scrollTo({
+                                    top: recipe.offsetTop - 80,
+                                    behavior: 'smooth'
+                                });
+                            }, 100);
+                        }
+                    } else {
+                        // Si la recette n'existe pas, afficher la première
+                        if (recipeDetails.length > 0) {
+                            recipeDetails[0].style.display = 'block';
+                        }
+                    }
+                } else {
+                    // Si pas d'ancre, on affiche juste la première recette
+                    if (recipeDetails.length > 0) {
+                        recipeDetails[0].style.display = 'block';
+                        for (let i = 1; i < recipeDetails.length; i++) {
+                            recipeDetails[i].style.display = 'none';
+                        }
+                    }
+                }
+            }
+            
+            // Initialisation: afficher la bonne recette au chargement
+            showRecipeBasedOnHash();
+            
+            // Intercepter les clics sur les liens de recettes pour une navigation fluide
+            document.querySelectorAll('a[href^="menu.html#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetRecipe = this.getAttribute('href').split('#')[1];
+                    window.location.hash = targetRecipe;
+                    showRecipeBasedOnHash();
+                });
+            });
+            
+            // Écouter les changements de hash dans l'URL
+            window.addEventListener('hashchange', showRecipeBasedOnHash);
+
+            // Fonction pour afficher des recettes aléatoires dans la section "Autres Recettes"
+            function displayRandomRecipes() {
+                // Toutes les recettes disponibles
+                const allRecipes = [
+                    {
+                        id: 'rasengan',
+                        name: 'Le Rasengan',
+                        image: 'img/993f6a0f28ba76a0741ea2f0d5652362.jpg',
+                        tag: 'Signature',
+                        description: 'Notre création phare qui tourbillonne d\'énergie, avec une concentration intense de saveurs qui explose en bouche.'
+                    },
+                    {
+                        id: 'trueno',
+                        name: 'La Trueno D\'Akina',
+                        image: 'img/b924a11332a2075fc8a64bca909c96a3.jpg',
+                        tag: 'Bestseller',
+                        description: 'Un café stratifié noir et blanc inspiré de la légendaire AE86, offrant une expérience qui évolue à chaque gorgée.'
+                    },
+                    {
+                        id: 'zergling',
+                        name: 'Le Zergling',
+                        image: 'img/image.webp',
+                        tag: 'Énergisant',
+                        description: 'Une boisson énergisante aux notes fruitées et acidulées, rapide à préparer et foudroyante en bouche.'
+                    },
+                    {
+                        id: 'titan',
+                        name: 'Le Titan Brew',
+                        image: 'img/image (2).webp',
+                        tag: 'Imposant',
+                        description: 'Cette boisson imposante évoque la puissance et la complexité des Titans avec ses multiples couches de saveurs.'
+                    },
+                    {
+                        id: 'sakura',
+                        name: 'Le Sakura Matcha Latte',
+                        image: 'img/a0514ea3c638d0b6bf13667661350f6a.jpg',
+                        tag: 'Floral',
+                        description: 'Un délicat latte au matcha japonais, parfumé aux fleurs de cerisier pour une expérience zen.'
+                    },
+                    {
+                        id: 'shonen',
+                        name: 'Le Shonen Spirit',
+                        image: 'img/ae3e7456a98add3d7617333a627c3e18.jpg',
+                        tag: 'Inspirant',
+                        description: 'Une boisson colorée et énergétique qui incarne les valeurs du genre shonen : détermination et dépassement de soi.'
+                    },
+                    {
+                        id: 'mecha',
+                        name: 'Le Mecha Fuel',
+                        image: 'img/baf3dd926d2ae6888b92038298eda2b5.jpg',
+                        tag: 'Puissant',
+                        description: 'Un carburant robuste conçu pour les pilotes de mechas, alliant puissance et technologie en une boisson énergisante.'
+                    },
+                    {
+                        id: 'ultra',
+                        name: 'L\'Ultra Instinct',
+                        image: 'img/153fb13af7d4cdbb90b8d79607a1a6b8.jpg',
+                        tag: 'Ultra Fort',
+                        description: 'Notre café le plus puissant, aux notes révélatrices et au potentiel illimité pour transcender vos limites.'
+                    },
+                    {
+                        id: 'potion',
+                        name: 'La Potion',
+                        image: 'img/image (1).jpg',
+                        tag: 'Revigorant',
+                        description: 'Un mélange revigorant aux couleurs vives et au goût surprenant qui vous redonnera toute votre énergie.'
+                    }
+                ];
+
+                // Exclure la recette actuellement affichée
+                const currentRecipeId = window.location.hash.substring(1) || 'rasengan';
+                const availableRecipes = allRecipes.filter(recipe => recipe.id !== currentRecipeId);
+
+                // Sélectionner 3 recettes aléatoires
+                const selectedRecipes = [];
+                const recipeCount = Math.min(3, availableRecipes.length);
+                
+                while (selectedRecipes.length < recipeCount) {
+                    const randomIndex = Math.floor(Math.random() * availableRecipes.length);
+                    const recipe = availableRecipes[randomIndex];
+                    
+                    // Vérifier si cette recette n'a pas déjà été sélectionnée
+                    if (!selectedRecipes.some(r => r.id === recipe.id)) {
+                        selectedRecipes.push(recipe);
+                    }
+                }
+
+                // Mettre à jour le HTML de la section "Autres Recettes"
+                const recipeGrid = document.querySelector('.other-recipes .recipe-grid');
+                recipeGrid.innerHTML = '';
+
+                selectedRecipes.forEach(recipe => {
+                    recipeGrid.innerHTML += `
+                        <div class="recipe-card-minimal">
+                            <div class="recipe-image">
+                                <img src="${recipe.image}" alt="${recipe.name}">
+                                <div class="recipe-tag-minimal">${recipe.tag}</div>
+                            </div>
+                            <div class="recipe-content">
+                                <h3>${recipe.name}</h3>
+                                <p>${recipe.description}</p>
+                                <a href="menu.html#${recipe.id}" class="btn-link">Voir la recette</a>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            // Appeler la fonction au chargement de la page
+            displayRandomRecipes();
+
+            // Rappeler la fonction chaque fois que la recette change
+            window.addEventListener('hashchange', displayRandomRecipes);
+        });
+    </script>
 </body>
 </html>
