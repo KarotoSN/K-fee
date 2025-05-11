@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#d2691e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="K-fee">
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <link rel="manifest" href="manifest.json">
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -73,20 +82,6 @@
     </header>
 
     <main class="recipe-catalog">
-        <div class="search-bar-container">
-            <div class="container">
-                <div class="search-bar">
-                    <input type="text" id="recipe-search" placeholder="Rechercher une recette...">
-                    <button id="search-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
         <div class="container">
             <div class="recipe-categories">
                 <button class="recipe-cat-btn active" data-category="all">Toutes les recettes</button>
@@ -443,37 +438,6 @@
                         }
                     });
                 });
-            });
-            
-            // Search functionality
-            const searchInput = document.getElementById('recipe-search');
-            const searchButton = document.getElementById('search-button');
-            
-            function performSearch() {
-                const searchTerm = searchInput.value.toLowerCase();
-                
-                recipeItems.forEach(item => {
-                    const title = item.querySelector('.recipe-item-title').textContent.toLowerCase();
-                    const description = item.querySelector('.recipe-item-description').textContent.toLowerCase();
-                    const tags = item.querySelector('.recipe-item-tags').textContent.toLowerCase();
-                    
-                    if (title.includes(searchTerm) || description.includes(searchTerm) || tags.includes(searchTerm)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-                
-                // Reset category buttons
-                categoryButtons.forEach(btn => btn.classList.remove('active'));
-                categoryButtons[0].classList.add('active');
-            }
-            
-            searchButton.addEventListener('click', performSearch);
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    performSearch();
-                }
             });
         });
 

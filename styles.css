@@ -1,24 +1,24 @@
 :root {
-    /* Palette de couleurs plus harmonieuse */
-    --color-primary: #d2691e;
-    --color-primary-dark: #ac5817;
-    --color-primary-light: #e9b277;
-    --color-primary-rgb: 210, 105, 30;
-    --color-background: #fffaf5;
-    --color-foreground: #32292f;
-    --color-muted: #f8f1e9;
-    --color-muted-foreground: #705f58;
-    --color-border: #efe2d4;
+    /* Nouvelle palette de couleurs - Thème Turquoise/Menthe */
+    --color-primary: #40a798;
+    --color-primary-dark: #307b70;
+    --color-primary-light: #6ccbbe;
+    --color-primary-rgb: 64, 167, 152;
+    --color-background: #f7fafa;
+    --color-foreground: #223634;
+    --color-muted: #eef8f7;
+    --color-muted-foreground: #5d7976;
+    --color-border: #d8edea;
     --color-card: #ffffff;
-    --color-card-foreground: #32292f;
-    --color-accent: #fbeee3;
-    --color-accent-foreground: #32292f;
+    --color-card-foreground: #223634;
+    --color-accent: #e0f5f1;
+    --color-accent-foreground: #223634;
     
-    /* Typography */
+    /* Typography - Inchangé */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
     
-    /* Spacing - Conserver les mêmes */
+    /* Spacing - Inchangé */
     --spacing-1: 0.25rem;
     --spacing-2: 0.5rem;
     --spacing-3: 0.75rem;
@@ -33,19 +33,19 @@
     --spacing-24: 6rem;
     --spacing-32: 8rem;
     
-    /* Shadows - Plus subtils et élégants */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.06);
-    --shadow-md: 0 8px 15px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 15px 25px rgba(0, 0, 0, 0.06), 0 5px 10px rgba(0, 0, 0, 0.04);
+    /* Shadows - Plus doux */
+    --shadow-sm: 0 2px 4px rgba(64, 167, 152, 0.05), 0 1px 2px rgba(64, 167, 152, 0.1);
+    --shadow: 0 4px 6px rgba(64, 167, 152, 0.07), 0 2px 4px rgba(64, 167, 152, 0.06);
+    --shadow-md: 0 8px 15px rgba(64, 167, 152, 0.08), 0 3px 6px rgba(64, 167, 152, 0.12);
+    --shadow-lg: 0 15px 25px rgba(64, 167, 152, 0.1), 0 5px 10px rgba(64, 167, 152, 0.06);
     
-    /* Border Radius */
-    --radius-sm: 0.125rem;
-    --radius: 0.25rem;
-    --radius-md: 0.375rem;
-    --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
-    --radius-2xl: 1rem;
+    /* Border Radius - Plus arrondi pour un look moderne */
+    --radius-sm: 0.25rem;
+    --radius: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
     --radius-full: 9999px;
     
     /* Transitions - Plus douces */
@@ -55,21 +55,21 @@
     --transition-transform: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Mode sombre avec des couleurs plus harmonieuses */
+/* Mode sombre adapté au thème turquoise */
 .dark {
-    --color-primary: #e9a86c;
-    --color-primary-dark: #c78445;
-    --color-primary-light: #f0c094;
-    --color-primary-rgb: 233, 168, 108;
-    --color-background: #1e1915;
-    --color-foreground: #f5ede5;
-    --color-muted: #2c241e;
-    --color-muted-foreground: #c4b5a8;
-    --color-border: #3d322a;
-    --color-card: #282220;
-    --color-card-foreground: #f5ede5;
-    --color-accent: #352a22;
-    --color-accent-foreground: #f5ede5;
+    --color-primary: #50c2b2;
+    --color-primary-dark: #3da99a;
+    --color-primary-light: #7ed5ca;
+    --color-primary-rgb: 80, 194, 178;
+    --color-background: #1a2928;
+    --color-foreground: #e6f5f3;
+    --color-muted: #253c3a;
+    --color-muted-foreground: #a8cdc9;
+    --color-border: #2e4a47;
+    --color-card: #1f3331;
+    --color-card-foreground: #e6f5f3;
+    --color-accent: #274440;
+    --color-accent-foreground: #e6f5f3;
 }
 
 /* Reset */
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-    background-color: rgba(184, 115, 51, 0.1);
+    background-color: rgba(64, 167, 152, 0.1);
 }
 
 .btn-product {
@@ -911,8 +911,8 @@ max-height: 500px;
     padding: 100px 20px;
     background-color: #f9f4ef;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(210, 105, 30, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 30%, rgba(210, 105, 30, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(64, 167, 152, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba(64, 167, 152, 0.08) 0%, transparent 50%);
     position: relative;
     overflow: hidden;
 }
@@ -924,7 +924,7 @@ max-height: 500px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,30 C35,10 65,10 70,30 C75,50 60,75 50,90 C40,75 25,50 30,30 Z" stroke="rgba(210, 105, 30, 0.1)" fill="none" stroke-width="1.5"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,30 C35,10 65,10 70,30 C75,50 60,75 50,90 C40,75 25,50 30,30 Z" stroke="rgba(64, 167, 152, 0.1)" fill="none" stroke-width="1.5"/></svg>');
     background-size: 120px 120px;
     opacity: 0.5;
     z-index: 0;
@@ -934,12 +934,12 @@ max-height: 500px;
 .dark .featured-products {
     background-color: #1a1512;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(210, 105, 30, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 30%, rgba(210, 105, 30, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(64, 167, 152, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba(64, 167, 152, 0.1) 0%, transparent 50%);
 }
 
 .dark .featured-products::before {
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,30 C35,10 65,10 70,30 C75,50 60,75 50,90 C40,75 25,50 30,30 Z" stroke="rgba(233, 168, 108, 0.15)" fill="none" stroke-width="1.5"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,30 C35,10 65,10 70,30 C75,50 60,75 50,90 C40,75 25,50 30,30 Z" stroke="rgba(80, 194, 178, 0.15)" fill="none" stroke-width="1.5"/></svg>');
 }
 
 @keyframes floatPattern {
@@ -1043,9 +1043,9 @@ max-height: 500px;
     overflow: hidden;
     box-shadow: 
         0 20px 40px rgba(0, 0, 0, 0.15),
-        0 0 0 1px rgba(210, 105, 30, 0.05),
+        0 0 0 1px rgba(64, 167, 152, 0.05),
         0 0 0 5px rgba(255, 255, 255, 0.1),
-        0 0 20px rgba(210, 105, 30, 0.2);
+        0 0 20px rgba(64, 167, 152, 0.2);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: rotate(-2deg);
     width: 100%;
@@ -1061,9 +1061,9 @@ max-height: 500px;
     transform: rotate(0) scale(1.05);
     box-shadow: 
         0 30px 60px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(210, 105, 30, 0.1),
+        0 0 0 1px rgba(64, 167, 152, 0.1),
         0 0 0 8px rgba(255, 255, 255, 0.15),
-        0 0 30px rgba(210, 105, 30, 0.3);
+        0 0 30px rgba(64, 167, 152, 0.3);
 }
 
 .product-image img {
@@ -1299,7 +1299,7 @@ max-height: 500px;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    box-shadow: 0 8px 20px rgba(210, 105, 30, 0.3);
+    box-shadow: 0 8px 20px rgba(64, 167, 152, 0.3);
 }
 
 .btn-product::before {
@@ -1317,7 +1317,7 @@ max-height: 500px;
 .btn-product:hover {
     background-color: var(--color-primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(210, 105, 30, 0.4);
+    box-shadow: 0 12px 25px rgba(64, 167, 152, 0.4);
 }
 
 .btn-product:hover::before {
@@ -1326,7 +1326,7 @@ max-height: 500px;
 
 .btn-product:active {
     transform: translateY(0);
-    box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
+    box-shadow: 0 5px 15px rgba(64, 167, 152, 0.3);
 }
 
 .cup-decoration {
@@ -1335,7 +1335,7 @@ max-height: 500px;
     right: -10px;
     width: 40px;
     height: 40px;
-    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21V19H20V21H2M20,8V5H18V8H20M20,3A2,2 0 0,1 22,5V8A2,2 0 0,1 20,10H18V13A4,4 0 0,1 14,17H8A4,4 0 0,1 4,13V3H20M16,5H6V13A2,2 0 0,0 8,15H14A2,2 0 0,0 16,13V5Z" fill="%23d2691e"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2,21V19H20V21H2M20,8V5H18V8H20M20,3A2,2 0 0,1 22,5V8A2,2 0 0,1 20,10H18V13A4,4 0 0,1 14,17H8A4,4 0 0,1 4,13V3H20M16,5H6V13A2,2 0 0,0 8,15H14A2,2 0 0,0 16,13V5Z" fill="%2340a798"/></svg>');
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -1450,7 +1450,7 @@ max-height: 500px;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 10C35 20 45 25 55 25C55 40 45 55 30 65C15 55 5 40 5 25C15 25 25 20 30 10Z" stroke="rgba(210, 105, 30, 0.05)" fill="none" stroke-width="1"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 10C35 20 45 25 55 25C55 40 45 55 30 65C15 55 5 40 5 25C15 25 25 20 30 10Z" stroke="rgba(64, 167, 152, 0.05)" fill="none" stroke-width="1"/></svg>');
     background-size: 120px 120px;
     opacity: 0.5;
     z-index: 0;
@@ -1795,47 +1795,6 @@ max-height: 500px;
     background-color: var(--color-background);
 }
 
-/* Barre de recherche */
-.search-bar-container {
-    background-color: var(--color-primary);
-    padding: var(--spacing-6) 0;
-    margin-bottom: var(--spacing-8);
-}
-
-.search-bar {
-    display: flex;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-}
-
-.search-bar input {
-    flex: 1;
-    padding: var(--spacing-3) var(--spacing-4);
-    border: none;
-    font-size: 1rem;
-}
-
-.search-bar input:focus {
-    outline: none;
-}
-
-.search-bar button {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: var(--spacing-3) var(--spacing-4);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: var(--color-primary-dark);
-}
-
 /* Newsletter section */
 .newsletter-section {
     background-color: var(--color-muted);
@@ -1847,65 +1806,6 @@ max-height: 500px;
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.newsletter-container h2 {
-    font-family: var(--font-serif);
-    font-size: 2rem;
-    margin-bottom: var(--spacing-4);
-    color: var(--color-foreground);
-}
-
-.newsletter-container p {
-    margin-bottom: var(--spacing-6);
-    color: var(--color-muted-foreground);
-}
-
-.newsletter-form .form-group {
-    display: flex;
-    margin-bottom: var(--spacing-4);
-}
-
-.newsletter-form input[type="email"] {
-    flex: 1;
-    padding: var(--spacing-3) var(--spacing-4);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
-    font-size: 1rem;
-}
-
-.newsletter-form input[type="email"]:focus {
-    outline: none;
-    border-color: var(--color-primary);
-}
-
-.btn-subscribe {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: var(--spacing-3) var(--spacing-6);
-    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-subscribe:hover {
-    background-color: var(--color-primary-dark);
-}
-
-.form-consent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-2);
-    font-size: 0.875rem;
-    color: var(--color-muted-foreground);
-}
-
-.form-consent a {
-    color: var(--color-primary);
-    text-decoration: underline;
 }
 
 /* Style Luna Pâtisse pour les cartes de recettes */
@@ -2022,6 +1922,9 @@ max-height: 500px;
     text-decoration: none;
     padding: var(--spacing-2) 0;
     position: relative;
+    text-align: center; /* Centre le texte */
+    width: 100%; /* Prend toute la largeur disponible */
+    justify-content: center; /* Centre le texte horizontalement */
 }
 
 .recipe-item-link::after {
@@ -2067,8 +1970,8 @@ max-height: 500px;
 
 /* Reset et styles de base */
 :root {
-  --color-primary: #d2691e;
-  --color-primary-light: #e9b277;
+  --color-primary: #40a798;
+  --color-primary-light: #6ccbbe;
   --color-background: #fff;
   --color-text: #333;
   --color-text-light: #666;
@@ -2089,8 +1992,8 @@ max-height: 500px;
 }
 
 .dark {
-  --color-primary: #e9a86c;
-  --color-primary-light: #f0c094;
+  --color-primary: #50c2b2;
+  --color-primary-light: #7ed5ca;
   --color-background: #1a1817;
   --color-text: #eee;
   --color-text-light: #ccc;
@@ -2414,6 +2317,9 @@ img {
   display: inline-flex;
   align-items: center;
   position: relative;
+  text-align: center; /* Centre le texte */
+  width: 100%; /* Prend toute la largeur disponible */
+  justify-content: center; /* Centre le texte horizontalement */
 }
 
 .btn-link::after {
@@ -2466,17 +2372,35 @@ img {
 /* Section À propos */
 .about-minimal {
   padding: var(--spacing-xl) 0;
-  background-color: #f8f8f8;
+  background-color: #e0f5f1; /* Couleur de fond plus claire assortie au thème turquoise */
+  position: relative;
+  overflow: hidden;
 }
 
 .dark .about-minimal {
-  background-color: #1f1d1c;
+  background-color: #1f3331; /* Version sombre de la couleur de fond */
+}
+
+.about-minimal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M20,50 C20,36.7 36.7,20 50,20 C63.3,20 80,33.3 80,50 C80,66.7 66.7,80 50,80 C33.3,80 20,63.3 20,50 Z" stroke="rgba(64, 167, 152, 0.1)" fill="none" stroke-width="1.5"/></svg>');
+  background-size: 120px 120px;
+  opacity: 0.5;
+  z-index: 0;
+  animation: floatPattern 60s linear infinite;
 }
 
 .about-content {
   display: flex;
   gap: var(--spacing-xl);
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .about-text {
@@ -2484,84 +2408,185 @@ img {
 }
 
 .about-text h2 {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-6);
+  color: var(--color-foreground);
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 3px;
 }
 
 .about-text p {
-  margin-bottom: var(--spacing-md);
-  color: var(--color-text-light);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-muted-foreground);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+.about-text p:hover {
+  transform: translateX(5px);
+}
+
+.about-text p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
 }
 
 .about-image {
   flex: 1;
+  position: relative;
 }
 
 .about-image img {
-  border-radius: var(--radius-md);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform: rotate(-2deg);
+  border: 6px solid white;
 }
 
-/* Section Newsletter */
+.about-image:hover img {
+  transform: rotate(0) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,2 L21,2 L21,16 L13,16 L8,21 L8,16 L3,16 L3,2 Z" fill="none" stroke="%2340a798" stroke-width="1.5"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* Section Newsletter - Style moderne */
 .newsletter-minimal {
-  padding: var(--spacing-xl) 0;
-  background-color: white;
+  padding: var(--spacing-16) 0;
+  background: linear-gradient(135deg, #f7fafa 0%, #e0f5f1 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .dark .newsletter-minimal {
-  background-color: #242220;
+  background: linear-gradient(135deg, #1a2928 0%, #274440 100%);
+}
+
+.newsletter-minimal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,20 L80,40 L80,80 L20,80 L20,40 L50,20 Z" stroke="rgba(64, 167, 152, 0.1)" fill="none" stroke-width="1.5"/></svg>');
+  background-size: 180px 180px;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .newsletter-content {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   text-align: center;
+  padding: var(--spacing-8);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+}
+
+.dark .newsletter-content {
+  background-color: rgba(31, 51, 49, 0.7);
 }
 
 .newsletter-content h2 {
   font-family: var(--font-serif);
-  font-size: 2rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-4);
+  color: var(--color-foreground);
+  position: relative;
+  display: inline-block;
+}
+
+.newsletter-content h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: var(--spacing-2) auto 0;
+  border-radius: 3px;
 }
 
 .newsletter-content p {
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-lg);
+  color: var(--color-muted-foreground);
+  margin-bottom: var(--spacing-8);
+  font-size: 1.1rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .newsletter-form-minimal {
   display: flex;
   max-width: 500px;
   margin: 0 auto;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-form-minimal:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .newsletter-form-minimal input {
   flex: 1;
-  padding: var(--spacing-md) var(--spacing-lg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  padding: var(--spacing-4) var(--spacing-6);
+  border: none;
   font-size: 1rem;
   outline: none;
-}
-
-.newsletter-form-minimal input:focus {
-  border-color: var(--color-primary);
 }
 
 .newsletter-form-minimal button {
   background-color: var(--color-primary);
   color: white;
   border: none;
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-weight: 500;
+  padding: var(--spacing-4) var(--spacing-8);
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.newsletter-form-minimal button:hover {
-  background-color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
 }
 
 /* Footer minimaliste */
@@ -2612,7 +2637,7 @@ img {
 }
 
 .footer-nav ul li a:hover {
-  color: var (--color-primary);
+  color: var(--color-primary);
 }
 
 .footer-contact p {
@@ -3156,4 +3181,104 @@ img {
     .footer-grid {
         grid-template-columns: 1.5fr repeat(3, 1fr);
     }
+}
+
+/* PWA Specific Styles */
+@media (display-mode: standalone) {
+  /* Adjustments for when the site is running in standalone mode (as an app) */
+  body {
+    overscroll-behavior-y: none; /* Prevents pull-to-refresh and overscroll effects */
+  }
+  
+  .header {
+    padding-top: env(safe-area-inset-top); /* Respects the safe area on iOS */
+  }
+  
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom); /* Respects the safe area on iOS */
+  }
+  
+  /* Improve tap targets for mobile app */
+  button, a, .nav-link, .mobile-nav-link, .recipe-item-link {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Make form elements more touch-friendly */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on focus on iOS */
+  }
+  
+  /* Hide browser UI elements that don't make sense in an app context */
+  .back-to-top {
+    display: none;
+  }
+}
+
+/* App installation button styles */
+.install-button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.install-button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.install-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.install-notification.fade-out {
+  opacity: 0;
+}
+
+/* Better mobile experience */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .install-button {
+    margin: 8px 0 0 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Enhanced tap targets for mobile */
+  .recipe-card-minimal, 
+  .recipe-item,
+  .nav-link, 
+  .mobile-nav-link,
+  .footer-link,
+  .btn-primary,
+  .btn-link {
+    padding: 12px;
+  }
+  
+  /* Improved form elements for touch */
+  input[type="text"],
+  input[type="email"],
+  button[type="submit"] {
+    height: 48px;
+  }
 }

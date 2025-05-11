@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Optimisation des images de fond
     lazyLoadBackgrounds();
+    
+    // Register service worker for PWA functionality
+    registerServiceWorker();
+    
+    // Setup PWA install prompt
+    setupPWAInstall();
 });
 
 // Initialize animations when elements come into view
@@ -615,3 +621,132 @@ function initBackgroundVideo() {
         });
     });
 }
+
+// Service Worker Registration for PWA functionality
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(error => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+        });
+    }
+}
+
+// PWA Install Prompt Handling
+function setupPWAInstall() {
+    let deferredPrompt;
+    const installButton = document.createElement('button');
+    installButton.classList.add('install-button');
+    installButton.textContent = 'Installer l\'application';
+    installButton.style.display = 'none';
+    
+    // Add install button to the header
+    const headerContainer = document.querySelector('.header-container');
+    if (headerContainer) {
+        headerContainer.appendChild(installButton);
+    }
+    
+    // Save the event for later use
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        
+        // Show the install button
+        installButton.style.display = 'block';
+    });
+    
+    // Handle install button click
+    installButton.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        
+        // Show the install prompt
+        deferredPrompt.prompt();
+        
+        // Wait for the user to respond to the prompt
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log(`User response to the install prompt: ${outcome}`);
+        
+        // We've used the prompt, and can't use it again, throw it away
+        deferredPrompt = null;
+        
+        // Hide the install button
+        installButton.style.display = 'none';
+    });
+    
+    // Detect when the app is installed
+    window.addEventListener('appinstalled', () => {
+        console.log('PWA was installed');
+        
+        // Hide the install button
+        installButton.style.display = 'none';
+        
+        // Show a thank you message or take other actions
+        const installNotification = document.createElement('div');
+        installNotification.classList.add('install-notification');
+        installNotification.textContent = 'Merci d\'avoir installé K-fee!';
+        document.body.appendChild(installNotification);
+        
+        // Remove the notification after 3 seconds
+        setTimeout(() => {
+            installNotification.classList.add('fade-out');
+            setTimeout(() => {
+                document.body.removeChild(installNotification);
+            }, 500);
+        }, 3000);
+    });
+}
+
+// Add styles for the PWA install button and notification
+document.addEventListener('DOMContentLoaded', () => {
+    const style = document.createElement('style');
+    style.textContent = `
+        .install-button {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .install-button:hover {
+            background-color: var(--color-primary-dark);
+        }
+        
+        .install-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--color-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        
+        .install-notification.fade-out {
+            opacity: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .install-button {
+                margin: 8px 0 0 0;
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+});
