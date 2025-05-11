@@ -7,7 +7,7 @@
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#d2691e">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style"="black-translucent">
     <meta name="apple-mobile-web-app-title" content="K-fee">
     <link rel="apple-touch-icon" href="icons/icon-152x152.png">
     <link rel="manifest" href="manifest.json">
@@ -312,16 +312,53 @@
         <div class="newsletter-section">
             <div class="container">
                 <div class="newsletter-container">
-                    <h2>Ne manquez aucune recette !</h2>
-                    <p>Abonnez-vous à notre newsletter pour recevoir nos nouvelles recettes directement dans votre boîte mail</p>
+                    <div class="newsletter-content">
+                        <div class="newsletter-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h2>Ne manquez aucune recette !</h2>
+                        <p>Abonnez-vous à notre newsletter pour recevoir nos nouvelles recettes et astuces exclusives directement dans votre boîte mail</p>
+                    </div>
                     <form class="newsletter-form">
                         <div class="form-group">
-                            <input type="email" placeholder="Votre adresse mail" required>
-                            <button type="submit" class="btn-subscribe">S'abonner</button>
+                            <input type="email" placeholder="Votre adresse mail" required aria-label="Votre adresse mail">
+                            <button type="submit" class="btn-subscribe">
+                                <span>S'abonner</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
                         </div>
                         <div class="form-consent">
                             <input type="checkbox" id="consent" required>
                             <label for="consent">J'ai lu et j'accepte les <a href="#">conditions générales</a>.</label>
+                        </div>
+                        <div class="newsletter-benefits">
+                            <div class="benefit-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Recettes exclusives</span>
+                            </div>
+                            <div class="benefit-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Astuces et conseils</span>
+                            </div>
+                            <div class="benefit-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Désinscription facile</span>
+                            </div>
                         </div>
                     </form>
                 </div>
