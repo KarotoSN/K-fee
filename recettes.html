@@ -7,7 +7,7 @@
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#d2691e">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style"="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="K-fee">
     <link rel="apple-touch-icon" href="icons/icon-152x152.png">
     <link rel="manifest" href="manifest.json">
@@ -467,34 +467,121 @@
             const categoryButtons = document.querySelectorAll('.recipe-cat-btn');
             const recipeItems = document.querySelectorAll('.recipe-item');
             
+            // Fonction pour filtrer les recettes
+            function filterRecipes(category) {
+                categoryButtons.forEach(btn => {
+                    if(btn.getAttribute('data-category') === category) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+                
+                recipeItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category').includes(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Mettre à jour l'URL sans recharger la page
+                const url = new URL(window.location);
+                if (category !== 'all') {
+                    url.searchParams.set('cat', category);
+                } else {
+                    url.searchParams.delete('cat');
+                }
+                window.history.pushState({}, '', url);
+            }
+            
+            // Vérifier les paramètres d'URL pour le filtrage initial
+            const urlParams = new URLSearchParams(window.location.search);
+            const catParam = urlParams.get('cat');
+            
+            if (catParam && ['hot', 'cold', 'special'].includes(catParam)) {
+                filterRecipes(catParam);
+            }
+            
+            // Ajouter des écouteurs d'événements pour les boutons de catégorie
             categoryButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Active button
-                    categoryButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    
-                    // Filter recipes
                     const category = button.getAttribute('data-category');
-                    
-                    recipeItems.forEach(item => {
-                        if (category === 'all' || item.getAttribute('data-category').includes(category)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
+                    filterRecipes(category);
                 });
             });
+            
+            // Mettez à jour l'année actuelle dans le copyright
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Fonctionnalité de retour en haut
+            document.querySelector('.back-to-top a').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Mise en cache des images pour le mode hors ligne
+            if ('caches' in window) {
+                // Récupérer toutes les images de recettes
+                const recipeImages = document.querySelectorAll('.recipe-item-image img');
+                
+                // Ajouter des écouteurs de chargement pour chaque image
+                recipeImages.forEach(img => {
+                    img.addEventListener('load', () => {
+                        // Stocker l'image dans le cache
+                        caches.open('recipe-images-cache').then(cache => {
+                            cache.add(img.src);
+                        });
+                    });
+                    
+                    // Ajouter le loading lazy pour améliorer les performances
+                    img.loading = 'lazy';
+                    
+                    // Ajouter des dimensions pour éviter le layout shift
+                    img.setAttribute('width', '100%');
+                    img.setAttribute('height', 'auto');
+                });
+            }
+            
+            // Gérer le formulaire d'abonnement à la newsletter
+            const newsletterForm = document.querySelector('.newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const email = this.querySelector('input[type="email"]').value;
+                    
+                    // Simulation d'envoi de formulaire (à remplacer par votre API)
+                    console.log('Email soumis:', email);
+                    
+                    // Afficher un message de confirmation
+                    const formGroup = this.querySelector('.form-group');
+                    formGroup.innerHTML = '<div class="success-message">Merci pour votre inscription! Vous recevrez bientôt nos dernières recettes.</div>';
+                    
+                    // Stocker l'abonnement localement pour le mode hors ligne
+                    localStorage.setItem('newsletter-subscribed', 'true');
+                });
+            }
         });
-
-        // Mettez à jour l'année actuelle dans le copyright
-        document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        // Fonctionnalité de retour en haut
-        document.querySelector('.back-to-top a').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+        // Vérifier périodiquement les mises à jour du service worker
+        if ('serviceWorker' in navigator) {
+            // Vérifier les mises à jour du service worker toutes les 6 heures
+            setInterval(() => {
+                navigator.serviceWorker.ready.then(registration => {
+                    registration.update();
+                });
+            }, 6 * 60 * 60 * 1000);
+            
+            // Écouter les événements de changement du service worker
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (refreshing) return;
+                
+                // La page sera actualisée seulement une fois
+                refreshing = true;
+                window.location.reload();
+            });
+        }
     </script>
 </body>
 </html>
