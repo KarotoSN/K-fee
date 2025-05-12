@@ -100,43 +100,233 @@ function initAnimations() {
 
 // Setup theme toggle with animations améliorées
 function setupThemeToggle() {
-    const themeToggle = document.querySelector('.theme-toggle');
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeDropdown = document.querySelector('.theme-dropdown');
+    const themeOptions = document.querySelectorAll('.theme-option');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     
     // Vérifier les préférences de thème sauvegardées ou utiliser la préférence système
     const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
     
-    // Appliquer le thème
-    if (currentTheme === 'dark') {
-        document.body.classList.add('dark');
+    // Appliquer le thème actuel
+    applyTheme(currentTheme);
+    
+    // Mettre en évidence l'option de thème active
+    highlightActiveTheme(currentTheme);
+    
+    // Mise à jour de l'icône en fonction du thème actuel
+    function updateThemeIcon(theme) {
+        const themeIcon = themeToggleBtn.querySelector('.theme-icon');
+        themeIcon.innerHTML = '';
+        
+        // SVGs pour les différents thèmes
+        const icons = {
+            light: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+                </svg>`,
+            dark: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 A7 7 0 0 0 21 12.79z"></path>
+                </svg>`,
+            coffee: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                    <line x1="6" y1="1" x2="6" y2="4"></line>
+                    <line x1="10" y1="1" x2="10" y2="4"></line>
+                    <line x1="14" y1="1" x2="14" y2="4"></line>
+                </svg>`,
+            mint: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0"></path>
+                    <path d="M12 6a6 6 0 0 1 6 6c0 2.5-2.5 4-6 4s-6-1.5-6-4a6 6 0 0 1 6-6z"></path>
+                </svg>`,
+            lavender: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 17.8L5.8 21 7 14.1 2 9.3l7-1L12 2l3 6.3 7 1-5 4.8 1.2 6.9-6.2-3.2z"></path>
+                </svg>`
+        };
+        
+        themeIcon.innerHTML = icons[theme] || icons.light;
     }
     
-    // Animation de transition améliorée
+    // Mettre à jour l'icône au chargement
+    updateThemeIcon(currentTheme);
+    
+    // Mettre à jour l'icône lors du changement de thème
+    themeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const newTheme = this.getAttribute('data-theme');
+            updateThemeIcon(newTheme);
+        });
+    });
+      // Animation de transition améliorée pour les changements de thème
     const addThemeTransition = () => {
         document.documentElement.style.transition = 'background-color 0.5s ease, color 0.5s ease';
-        document.querySelectorAll('*').forEach(element => {
-            const computedStyle = window.getComputedStyle(element);
-            const hasColorOrBg = computedStyle.color || computedStyle.backgroundColor;
-            if (hasColorOrBg) {
-                element.style.transition = 
-                    (element.style.transition ? element.style.transition + ', ' : '') +
-                    'color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease';
-            }
+        
+        // Ajout d'un overlay de transition pour un effet plus doux
+        const transitionOverlay = document.createElement('div');
+        transitionOverlay.style.position = 'fixed';
+        transitionOverlay.style.top = '0';
+        transitionOverlay.style.left = '0';
+        transitionOverlay.style.width = '100%';
+        transitionOverlay.style.height = '100%';
+        transitionOverlay.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+        transitionOverlay.style.pointerEvents = 'none';
+        transitionOverlay.style.zIndex = '9999';
+        transitionOverlay.style.opacity = '0';
+        transitionOverlay.style.transition = 'opacity 0.5s ease';
+        document.body.appendChild(transitionOverlay);
+        
+        // Déclencher l'animation de transition
+        setTimeout(() => {
+            transitionOverlay.style.opacity = '0.1';
+            setTimeout(() => {
+                transitionOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    transitionOverlay.remove();
+                }, 500);
+            }, 200);
+        }, 0);
+        
+        // Ajouter des transitions pour les éléments principaux
+        const elementsToTransition = [
+            'a', 'button', '.card', '.hero-content', '.product', '.stat',
+            '.recipe-item', '.footer', '.newsletter-content', 'header', 'nav',
+            '.theme-dropdown', '.theme-option', '.btn', '.social-link'
+        ];
+        
+        elementsToTransition.forEach(selector => {
+            document.querySelectorAll(selector).forEach(element => {
+                element.style.transition = 'color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease';
+            });
         });
     };
     
-    // Basculer le thème avec animation au clic
-    themeToggle.addEventListener('click', function() {
-        addThemeTransition();
-        const isDark = document.body.classList.toggle('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    // Ouvrir/fermer le dropdown au clic sur le bouton
+    themeToggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        themeDropdown.classList.toggle('active');
         
         // Animation du bouton
-        themeToggle.classList.add('theme-toggle-active');
+        themeToggleBtn.classList.add('theme-toggle-active');
         setTimeout(() => {
-            themeToggle.classList.remove('theme-toggle-active');
+            themeToggleBtn.classList.remove('theme-toggle-active');
         }, 500);
     });
+    
+    // Fermer le dropdown au clic ailleurs sur la page
+    document.addEventListener('click', function(e) {
+        if (!themeDropdown.contains(e.target) && !themeToggleBtn.contains(e.target)) {
+            themeDropdown.classList.remove('active');
+        }
+    });
+    
+    // Changer de thème au clic sur une option
+    themeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const newTheme = this.getAttribute('data-theme');
+            
+            // Ajouter la transition et appliquer le thème
+            addThemeTransition();
+            applyTheme(newTheme);
+            
+            // Mettre en évidence l'option active
+            highlightActiveTheme(newTheme);
+            
+            // Sauvegarder la préférence
+            localStorage.setItem('theme', newTheme);
+            
+            // Fermer le dropdown
+            themeDropdown.classList.remove('active');
+        });
+    });
+      // Fonctions utilitaires pour la gestion des thèmes
+    function applyTheme(theme) {
+        // Animation de changement de thème pour une expérience utilisateur plus fluide
+        const oldThemeClass = localStorage.getItem('theme') !== 'light' ? 
+            (localStorage.getItem('theme') === 'dark' ? 'dark' : `theme-${localStorage.getItem('theme')}`) : '';
+        
+        // Ajouter une classe de transition pour des animations plus fluides
+        document.body.classList.add('theme-transition');
+        
+        // Retirer toutes les classes de thème précédentes
+        document.body.classList.remove('dark', 'theme-coffee', 'theme-mint', 'theme-lavender');
+        
+        // Ajouter la classe correspondant au thème choisi
+        if (theme !== 'light') {
+            if (theme === 'dark') {
+                document.body.classList.add('dark');
+            } else {
+                document.body.classList.add(`theme-${theme}`);
+            }
+        }
+        
+        // Mettre à jour les méta-tags pour les navigateurs mobiles
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+            const themeColors = {
+                'light': '#f7fafa',
+                'dark': '#1a2928',
+                'coffee': '#f8f4f0',
+                'mint': '#f0f8f5',
+                'lavender': '#f5f3fa'
+            };
+            metaThemeColor.setAttribute('content', themeColors[theme] || themeColors.light);
+        }
+        
+        // Retirer la classe de transition après un court délai
+        setTimeout(() => {
+            document.body.classList.remove('theme-transition');
+        }, 500);
+        
+        // Personnaliser les favicon en fonction du thème actif
+        updateFavicon(theme);
+    }
+    
+    function highlightActiveTheme(theme) {
+        themeOptions.forEach(option => {
+            if (option.getAttribute('data-theme') === theme) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+    }
+
+    // Fonction pour mettre à jour le favicon en fonction du thème
+    function updateFavicon(theme) {
+        // Cette fonction pourrait être utilisée dans le futur pour adapter le favicon
+        // selon le thème choisi si le site dispose de différentes versions du favicon
+        // Pour l'instant, on ne modifie pas le favicon existant
+    }
+
+    // Ajouter des événements pour de meilleures animations de transition de thème
+    document.addEventListener('themeChange', function(e) {
+        // Créer un effet de particules qui s'adaptent au thème actuel
+        const createThemeChangeEffect = () => {
+            // Cette fonction pourrait être utilisée pour ajouter un effet visuel
+            // lors du changement de thème, comme des particules ou un flash subtil
+            // Pour l'instant, on se contente des transitions CSS standard
+        };
+        
+        // Appliquer l'effet si nécessaire
+        if (e.detail && e.detail.animate) {
+            createThemeChangeEffect();
+        }
+    });
+    
+    // Améliorer la fonction de changement de thème pour qu'elle émette un événement
+    const oldApplyTheme = applyTheme;
+    applyTheme = function(theme, options = {}) {
+        oldApplyTheme(theme);
+        
+        // Émettre un événement personnalisé pour le changement de thème
+        const event = new CustomEvent('themeChange', {
+            detail: {
+                theme: theme,
+                animate: options.animate !== false
+            }
+        });
+        document.dispatchEvent(event);
+    };
 }
 
 // Setup mobile menu avec animations améliorées
